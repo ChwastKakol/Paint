@@ -25,6 +25,11 @@ public class DrawableRectangle extends Drawable {
         return rectangle.contains(x, y);
     }
 
+    @Override
+    public void translate(int dx, int dy) {
+        rectangle.translate(dx, dy);
+    }
+
     public void setSecondPoint(int x, int y){
         if((x < origX) && (y < origY)){
             rectangle.setSize(origX - x, origY - y);

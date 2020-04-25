@@ -15,6 +15,8 @@ public abstract class Drawable implements Serializable, Cloneable {
         return false;
     }
 
+    public void translate(int dx, int dy){}
+
     public void setColor(Color color) {
         this.color = new Color(color.getRGB());
     }
