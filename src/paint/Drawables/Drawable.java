@@ -8,7 +8,16 @@ import java.io.Serializable;
 public abstract class Drawable implements Serializable, Cloneable {
     protected Color color;
     protected Long ID;
+
     public abstract void draw(Graphics2D graphics2D);
+
+    public boolean contains(int x, int y){
+        return false;
+    }
+
+    public void setColor(Color color) {
+        this.color = new Color(color.getRGB());
+    }
 
     protected Drawable(){
         ID = Application.getInstance().getNewID();

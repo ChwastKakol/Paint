@@ -2,17 +2,17 @@ package paint.Tools;
 
 import paint.Application;
 import paint.Commands.AddDrawableCommand;
+import paint.Drawables.DrawableTriangle;
 import paint.PaintingWindow;
-import paint.Drawables.DrawableRectangle;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
-public class RectangleTool extends Tool {
+public class TriangleTool extends Tool{
     private PaintingWindow paintingWindow;
-    private DrawableRectangle drawableRectangle;
+    private DrawableTriangle drawableTriangle;
 
-    public RectangleTool(PaintingWindow paintingWindow, Color color){
+    public TriangleTool(PaintingWindow paintingWindow, Color color){
         this.color = color;
         this.paintingWindow = paintingWindow;
     }
@@ -21,16 +21,16 @@ public class RectangleTool extends Tool {
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
             System.out.println(color.toString());
-            drawableRectangle = new DrawableRectangle(e.getX(), e.getY(), e.getX(), e.getY(), color);
+            drawableTriangle = new DrawableTriangle(e.getX(), e.getY(), e.getX(), e.getY(), color);
             //paintingWindow.addDrawable(rectangle);
-            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableRectangle));
+            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableTriangle));
         }
     }
 
     @Override
     public void processMouseDragged(MouseEvent e) {
-        if(drawableRectangle != null){
-            drawableRectangle.setSecondPoint(e.getX(), e.getY());
+        if(drawableTriangle != null){
+            drawableTriangle.setSecondPoint(e.getX(), e.getY());
         }
         paintingWindow.redraw();
     }
@@ -38,7 +38,7 @@ public class RectangleTool extends Tool {
     @Override
     public void processMouseUp(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
-            drawableRectangle = null;
+            drawableTriangle = null;
         }
     }
 }

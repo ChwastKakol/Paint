@@ -1,10 +1,7 @@
 package paint;
 
 import paint.Drawables.Drawable;
-import paint.Tools.LineTool;
-import paint.Tools.PointTool;
-import paint.Tools.RectangleTool;
-import paint.Tools.Tool;
+import paint.Tools.*;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -215,6 +212,36 @@ public class MainDisplay extends JFrame{
         });
         rectangleButton.setToolTipText("Draws a filled rectangle");
         toolBar.add(rectangleButton);
+
+        var ellipseButton = new JButton(new ImageIcon("src/paint/resources/rectangleTool.png"));
+        ellipseButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                tool = new EllipseTool(paintingWindow, color);
+            }
+        });
+        ellipseButton.setToolTipText("Draws a filled ellipse");
+        toolBar.add(ellipseButton);
+
+        var triangleButton = new JButton();
+        triangleButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                tool = new TriangleTool(paintingWindow, color);
+            }
+        });
+
+        triangleButton.setToolTipText("Draws a filled triangle");
+        toolBar.add(triangleButton);
+
+        var editButton = new JButton();
+        editButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                tool = new EditTool(paintingWindow, color);
+            }
+        });
+        toolBar.add(editButton);
 
         add(toolBar, BorderLayout.WEST);
     }

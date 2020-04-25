@@ -46,6 +46,14 @@ public class PaintingWindow extends JPanel {
         redraw();
     }
 
+    public Drawable getCollidedDrawable(int x, int y){
+        for(int i = drawables.size()-1; i >= 0; i--){
+            Drawable drawable = drawables.get(i);
+            if(drawable != null && drawable.contains(x,y)) return drawable;
+        }
+        return null;
+    }
+
     public void resetCanvas(){
         drawables = new ArrayList<Drawable>();
         redraw();

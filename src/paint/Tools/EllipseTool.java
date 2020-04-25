@@ -2,17 +2,18 @@ package paint.Tools;
 
 import paint.Application;
 import paint.Commands.AddDrawableCommand;
-import paint.PaintingWindow;
+import paint.Drawables.DrawableEllipse;
 import paint.Drawables.DrawableRectangle;
+import paint.PaintingWindow;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
-public class RectangleTool extends Tool {
+public class EllipseTool extends Tool {
     private PaintingWindow paintingWindow;
-    private DrawableRectangle drawableRectangle;
+    private DrawableEllipse drawableEllipse;
 
-    public RectangleTool(PaintingWindow paintingWindow, Color color){
+    public EllipseTool(PaintingWindow paintingWindow, Color color){
         this.color = color;
         this.paintingWindow = paintingWindow;
     }
@@ -21,16 +22,16 @@ public class RectangleTool extends Tool {
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
             System.out.println(color.toString());
-            drawableRectangle = new DrawableRectangle(e.getX(), e.getY(), e.getX(), e.getY(), color);
+            drawableEllipse = new DrawableEllipse(e.getX(), e.getY(), e.getX(), e.getY(), color);
             //paintingWindow.addDrawable(rectangle);
-            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableRectangle));
+            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableEllipse));
         }
     }
 
     @Override
     public void processMouseDragged(MouseEvent e) {
-        if(drawableRectangle != null){
-            drawableRectangle.setSecondPoint(e.getX(), e.getY());
+        if(drawableEllipse != null){
+            drawableEllipse.setSecondPoint(e.getX(), e.getY());
         }
         paintingWindow.redraw();
     }
@@ -38,7 +39,7 @@ public class RectangleTool extends Tool {
     @Override
     public void processMouseUp(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
-            drawableRectangle = null;
+            drawableEllipse = null;
         }
     }
 }
