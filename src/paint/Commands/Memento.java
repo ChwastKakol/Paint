@@ -5,6 +5,10 @@ import paint.Drawables.Drawable;
 public class Memento {
     protected Drawable drawable;
 
+    public Memento(){
+        drawable = null;
+    }
+
     public Memento(Drawable object) {
         try{
             this.drawable = object.clone();

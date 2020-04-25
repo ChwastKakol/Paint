@@ -39,14 +39,17 @@ public class Application {
     }
 
     public void undo(){
-        commandStack.get(undoRedoPointer).unExecute();
-        undoRedoPointer--;
+        if(undoRedoPointer > -1) {
+            commandStack.get(undoRedoPointer).unExecute();
+            undoRedoPointer--;
+        }
     }
 
     public void redo(){
-        if(undoRedoPointer >= commandStack.size() - 1) return;
+        if(undoRedoPointer >= commandStack.size()-1) return;
         undoRedoPointer++;
         commandStack.get(undoRedoPointer).execute();
+
     }
 
     public void addCommand(Command command){

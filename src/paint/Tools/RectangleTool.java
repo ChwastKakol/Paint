@@ -1,5 +1,7 @@
 package paint.Tools;
 
+import paint.Application;
+import paint.Commands.AddDrawableCommand;
 import paint.PaintingWindow;
 import paint.Drawables.Rectangle;
 
@@ -20,7 +22,8 @@ public class RectangleTool extends Tool {
         if(e.getButton() == MouseEvent.BUTTON1){
             System.out.println(color.toString());
             rectangle = new Rectangle(e.getX(), e.getY(), e.getX(), e.getY(), color);
-            paintingWindow.addDrawable(rectangle);
+            //paintingWindow.addDrawable(rectangle);
+            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, rectangle));
         }
     }
 

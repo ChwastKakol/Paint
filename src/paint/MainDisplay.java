@@ -1,7 +1,6 @@
 package paint;
 
 import paint.Drawables.Drawable;
-import paint.Drawables.EmptyDrawable;
 import paint.Tools.LineTool;
 import paint.Tools.PointTool;
 import paint.Tools.RectangleTool;

@@ -6,32 +6,21 @@ import paint.Drawables.Drawable;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Stack;
 
 public class PaintingWindow extends JPanel {
     private ArrayList<Drawable> drawables;
 
-    HashMap<Long, Drawable> drawableMap;
-    private Stack<Command> commands;
-
     public  PaintingWindow(){
         drawables = new ArrayList<Drawable>();
-        drawableMap = new HashMap<Long, Drawable>();
-        commands = Application.getInstance().getCommandStack();
-    }
-
-    public void CreateDrawableMap(){
-        /*for(Command c : commands){
-            if(drawableMap.containsKey(c.))
-        }*/
     }
 
     private void draw(Graphics graphics){
         Graphics2D graphics2D = (Graphics2D)graphics;
 
         for(Drawable d : drawables){
-            d.draw(graphics2D);
+            if(d != null){
+                d.draw(graphics2D);
+            }
         }
     }
 
@@ -42,14 +31,19 @@ public class PaintingWindow extends JPanel {
     }
 
     public void redraw(){
-        //revalidate();
+        revalidate();
         repaint();
     }
 
-    public void addDrawable(Drawable drawable){
+    public int addDrawable(Drawable drawable){
         drawables.add(drawable);
-        revalidate();
-        repaint();
+        redraw();
+        return drawables.size()-1;
+    }
+
+    public void setDrawable(int index, Drawable drawable){
+        drawables.set(index, drawable);
+        redraw();
     }
 
     public void resetCanvas(){
