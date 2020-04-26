@@ -1,10 +1,16 @@
 package paint.Drawables;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 
 public class DrawableRectangle extends Drawable {
     private final int origX, origY;
+    private boolean isFinished = false;
     private Rectangle rectangle;
+
+    private double scale = 1;
+    private double translationX = 0, translationY = 0;
+    private double rotation = 0;
 
     public DrawableRectangle(int x1, int y1, int x2, int y2, Color color){
         super();
@@ -12,6 +18,7 @@ public class DrawableRectangle extends Drawable {
         origX = x1;
         origY = y1;
         this.color = new Color(color.getRGB());
+        affineTransform = new AffineTransform();
     }
 
     @Override
@@ -22,19 +29,41 @@ public class DrawableRectangle extends Drawable {
     }
 
     @Override
+    public void scale(double scale) {
+        this.scale += scale;
+        createAffineTransform();
+        shape = affineTransform.createTransformedShape(rectangle);
+    }
+
+    @Override
     public void draw(Graphics2D graphics2D) {
         graphics2D.setColor(color);
-        graphics2D.fill(rectangle);
+        graphics2D.fill(isFinished ? shape : rectangle);
     }
 
     @Override
     public boolean contains(int x, int y) {
-        return rectangle.contains(x, y);
+        return isFinished ? shape.contains(x, y) : rectangle.contains(x, y);
     }
 
     @Override
     public void translate(int dx, int dy) {
-        rectangle.translate(dx, dy);
+        translationX += dx;
+        translationY += dy;
+        createAffineTransform();
+        shape = affineTransform.createTransformedShape(rectangle);
+    }
+
+    @Override
+    public void setRotation(double rotation) {
+        this.rotation = rotation;
+        createAffineTransform();
+        shape = affineTransform.createTransformedShape(rectangle);
+    }
+
+    @Override
+    public double getRotation() {
+        return rotation;
     }
 
     public void setSecondPoint(int x, int y){
@@ -53,5 +82,22 @@ public class DrawableRectangle extends Drawable {
         else {
             rectangle.setSize(x - origX, y - origY);
         }
+    }
+
+    public void setFinished(){
+        translationX = rectangle.getX() + rectangle.getWidth()/2;
+        translationY = rectangle.getY() + rectangle.getHeight()/2;
+        rectangle.translate(-(int)translationX, -(int)translationY);
+
+        createAffineTransform();
+        shape = affineTransform.createTransformedShape(rectangle);
+        isFinished = true;
+    }
+
+    private void createAffineTransform(){
+        affineTransform = new AffineTransform();
+        affineTransform.translate(translationX, translationY);
+        affineTransform.rotate(rotation);
+        affineTransform.scale(scale, scale);
     }
 }

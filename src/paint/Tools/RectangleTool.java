@@ -20,7 +20,6 @@ public class RectangleTool extends Tool {
     @Override
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
-            System.out.println(color.toString());
             drawableRectangle = new DrawableRectangle(e.getX(), e.getY(), e.getX(), e.getY(), color);
             Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableRectangle));
         }
@@ -37,6 +36,7 @@ public class RectangleTool extends Tool {
     @Override
     public void processMouseUp(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
+            drawableRectangle.setFinished();
             drawableRectangle = null;
         }
     }

@@ -61,6 +61,12 @@ public class MainDisplay extends JFrame{
                 tool.processMouseDragged(e);
             }
         });
+        paintingWindow.addMouseWheelListener(new MouseWheelListener() {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent mouseWheelEvent) {
+                tool.processMouseWheel(mouseWheelEvent);
+            }
+        });
 
         add(paintingWindow, BorderLayout.CENTER);
 

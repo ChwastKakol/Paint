@@ -20,10 +20,8 @@ public class LineTool extends Tool {
     @Override
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
-            System.out.println(color.toString());
             line = new Line(e.getX(), e.getY(), e.getX(), e.getY(), color);
             Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, line));
-            //paintingWindow.addDrawable(line);
         }
     }
 

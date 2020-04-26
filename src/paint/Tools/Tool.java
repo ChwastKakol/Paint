@@ -4,6 +4,7 @@ import paint.Drawables.Drawable;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelEvent;
 
 public abstract class Tool {
     protected Color color;
@@ -15,5 +16,6 @@ public abstract class Tool {
     public void processMouseDown(MouseEvent e){}
     public void processMouseUp(MouseEvent e){}
     public void processMouseDragged(MouseEvent e){}
+    public void processMouseWheel(MouseWheelEvent e){}
     public Drawable getSelected(){return null;}
 }
