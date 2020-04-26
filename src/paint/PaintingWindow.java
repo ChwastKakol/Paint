@@ -1,8 +1,5 @@
 package paint;
-
-import paint.Commands.Command;
 import paint.Drawables.Drawable;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -66,5 +63,12 @@ public class PaintingWindow extends JPanel {
     public void setDrawables(ArrayList<Drawable> drawables) {
         this.drawables = drawables;
         redraw();
+    }
+
+    public int getIndexByID(Long ID){
+        for(int i = 0; i < drawables.size(); i++){
+            if(drawables.get(i) != null && drawables.get(i).getID() == ID) return i;
+        }
+        return -1;
     }
 }

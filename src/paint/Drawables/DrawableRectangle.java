@@ -15,6 +15,13 @@ public class DrawableRectangle extends Drawable {
     }
 
     @Override
+    public Drawable clone() throws CloneNotSupportedException {
+        DrawableRectangle copy = (DrawableRectangle) super.clone();
+        copy.rectangle = new Rectangle(rectangle);
+        return copy;
+    }
+
+    @Override
     public void draw(Graphics2D graphics2D) {
         graphics2D.setColor(color);
         graphics2D.fill(rectangle);

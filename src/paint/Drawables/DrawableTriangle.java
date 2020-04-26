@@ -21,6 +21,18 @@ public class DrawableTriangle extends Drawable {
     }
 
     @Override
+    public void translate(int dx, int dy) {
+        polygon.translate(dx, dy);
+    }
+
+    @Override
+    public Drawable clone() throws CloneNotSupportedException {
+         DrawableTriangle copy = (DrawableTriangle) super.clone();
+         copy.polygon = new Polygon(polygon.xpoints, polygon.ypoints, polygon.npoints);
+         return copy;
+    }
+
+    @Override
     public boolean contains(int x, int y) {
         return polygon.contains(x, y);
     }

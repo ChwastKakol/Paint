@@ -1,5 +1,7 @@
 package paint.Tools;
 
+import paint.Application;
+import paint.Commands.EditDrawableCommand;
 import paint.Drawables.Drawable;
 import paint.PaintingWindow;
 
@@ -11,6 +13,8 @@ public class EditTool extends Tool {
     private int  x, y;
     private PaintingWindow paintingWindow;
 
+    private EditDrawableCommand command;
+
     public EditTool(PaintingWindow paintingWindow, Color color){
         this.paintingWindow = paintingWindow;
         this.color = color;
@@ -19,18 +23,17 @@ public class EditTool extends Tool {
     @Override
     public void processMouseDown(MouseEvent e) {
         drawable = paintingWindow.getCollidedDrawable(e.getX(), e.getY());
+        if(drawable != null){
+            command = new EditDrawableCommand(paintingWindow, drawable);
 
-        if(e.getButton() == MouseEvent.BUTTON1){
-            if(drawable != null){
+            if(e.getButton() == MouseEvent.BUTTON1){
                 x = e.getX();
                 y = e.getY();
             }
-        }
-
-        else if(e.getButton() == MouseEvent.BUTTON3) {
-            if (drawable != null) {
+            else if(e.getButton() == MouseEvent.BUTTON3) {
                 drawable.setColor(color);
-                paintingWindow.redraw();
+                command.setDrawable(drawable);
+                Application.getInstance().addCommand(command);
             }
         }
     }
@@ -48,8 +51,14 @@ public class EditTool extends Tool {
 
     @Override
     public void processMouseUp(MouseEvent e) {
-        if(e.getButton() == MouseEvent.BUTTON1){
-            drawable = null;
+        if(drawable != null && e.getButton() == MouseEvent.BUTTON1 && command != null){
+            command.setDrawable(drawable);
+            Application.getInstance().addCommand(command);
         }
+    }
+
+    @Override
+    public Drawable getSelected(){
+        return drawable;
     }
 }

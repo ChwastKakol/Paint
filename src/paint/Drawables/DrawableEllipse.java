@@ -22,6 +22,19 @@ public class DrawableEllipse extends Drawable {
     }
 
     @Override
+    public void translate(int dx, int dy) {
+        var frame = ellipse2D.getFrame();
+        ellipse2D.setFrame(frame.getX() + dx, frame.getY() + dy, frame.getWidth(), frame.getHeight());
+    }
+
+    @Override
+    public Drawable clone() throws CloneNotSupportedException {
+        DrawableEllipse copy = (DrawableEllipse) super.clone();
+        copy.ellipse2D = (Ellipse2D) ellipse2D.clone();
+        return copy;
+    }
+
+    @Override
     public boolean contains(int x, int y) {
         return ellipse2D.contains(x, y);
     }

@@ -1,8 +1,12 @@
 package paint;
 
+import paint.Commands.AddDrawableCommand;
+import paint.Commands.DeleteDrawableCommand;
 import paint.Drawables.Drawable;
+import paint.Drawables.DrawableRectangle;
 import paint.Tools.*;
 
+import javax.management.openmbean.InvalidOpenTypeException;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
@@ -13,6 +17,7 @@ import java.util.ArrayList;
 public class MainDisplay extends JFrame{
 
     JPopupMenu popupMenu;
+    Drawable clipBoard;
     Color color;
     PaintingWindow paintingWindow;
     Tool tool;
@@ -161,11 +166,46 @@ public class MainDisplay extends JFrame{
             }
         });
         editMenu.addSeparator();
-        addMenuItem(editMenu, "Cut", KeyEvent.VK_X, null, null);
-        addMenuItem(editMenu, "Copy", KeyEvent.VK_C, null, null);
-        addMenuItem(editMenu, "Paste", KeyEvent.VK_V, null, null);
+        addMenuItem(editMenu, "Cut", KeyEvent.VK_X, null, new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                setClipBoard(tool.getSelected());
+                if(tool.getSelected() != null){
+                    Application.getInstance().addCommand(new DeleteDrawableCommand(paintingWindow, tool.getSelected()));
+                }
+            }
+        });
+        addMenuItem(editMenu, "Copy", KeyEvent.VK_C, null, new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                setClipBoard(tool.getSelected());
+            }
+        });
+        addMenuItem(editMenu, "Paste", KeyEvent.VK_V, null, new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(clipBoard != null){
+                    try {
+                        Drawable copy = clipBoard.clone();
+                        copy.setID(Application.getInstance().getNewID());
+                        copy.translate(5,5);
+                        Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow,copy));
+                    }
+                    catch (CloneNotSupportedException e){
+                        System.out.println(e.getLocalizedMessage());
+                    }
+                }
+            }
+        });
         editMenu.addSeparator();
-        addMenuItemNoCtrl(editMenu, "Delete", KeyEvent.VK_DELETE);
+        addMenuItemNoCtrl(editMenu, "Delete", KeyEvent.VK_DELETE, new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(tool.getSelected() != null){
+                    Application.getInstance().addCommand(new DeleteDrawableCommand(paintingWindow, tool.getSelected()));
+                }
+            }
+        });
 
         var helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
@@ -262,10 +302,24 @@ public class MainDisplay extends JFrame{
         menu.add(jMenuItem);
     }
 
-    void addMenuItemNoCtrl(JMenu menu, String text, int accelerator){
+    void addMenuItemNoCtrl(JMenu menu, String text, int accelerator, ActionListener actionListener){
         var jMenuItem = new JMenuItem(text);
         jMenuItem.setAccelerator(KeyStroke.getKeyStroke(accelerator, 0));
+        if(actionListener != null){
+            jMenuItem.addActionListener(actionListener);
+        }
         menu.add(jMenuItem);
+    }
+
+    private void setClipBoard(Drawable drawable){
+        try {
+            if(drawable != null) {
+                clipBoard = drawable.clone();
+            }
+        }
+        catch (CloneNotSupportedException e){
+            System.out.println(e);
+        }
     }
 
 }
