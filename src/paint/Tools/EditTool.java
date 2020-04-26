@@ -67,9 +67,15 @@ public class EditTool extends Tool {
 
     @Override
     public void processMouseUp(MouseEvent e) {
-        if(drawable != null && e.getButton() == MouseEvent.BUTTON1 && command != null){
-            command.setDrawable(drawable);
-            Application.getInstance().addCommand(command);
+        if(drawable != null && command != null) {
+            if (e.getButton() == MouseEvent.BUTTON1) {
+                command.setDrawable(drawable);
+                Application.getInstance().addCommand(command);
+            }
+            else if(e.getButton() == MouseEvent.BUTTON2){
+                command.setDrawable(drawable);
+                Application.getInstance().addCommand(command);
+            }
         }
         mouseButton = 0;
     }

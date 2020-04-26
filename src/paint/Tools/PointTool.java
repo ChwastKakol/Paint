@@ -20,7 +20,6 @@ public class PointTool extends Tool {
     public void processMouseDown(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
             Application.getInstance().addCommand(new AddDrawableCommand(window, new Point(e.getX(), e.getY(), color)));
-            //window.addDrawable(new Point(e.getX(), e.getY(), color));
         }
     }
 }

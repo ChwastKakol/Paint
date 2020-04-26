@@ -20,9 +20,7 @@ public class TriangleTool extends Tool{
     @Override
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
-            System.out.println(color.toString());
             drawableTriangle = new DrawableTriangle(e.getX(), e.getY(), e.getX(), e.getY(), color);
-            //paintingWindow.addDrawable(rectangle);
             Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableTriangle));
         }
     }
@@ -38,6 +36,7 @@ public class TriangleTool extends Tool{
     @Override
     public void processMouseUp(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
+            drawableTriangle.setFinished();
             drawableTriangle = null;
         }
     }

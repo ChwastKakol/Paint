@@ -3,7 +3,6 @@ package paint.Tools;
 import paint.Application;
 import paint.Commands.AddDrawableCommand;
 import paint.Drawables.DrawableEllipse;
-import paint.Drawables.DrawableRectangle;
 import paint.PaintingWindow;
 
 import java.awt.*;
@@ -21,9 +20,7 @@ public class EllipseTool extends Tool {
     @Override
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
-            System.out.println(color.toString());
             drawableEllipse = new DrawableEllipse(e.getX(), e.getY(), e.getX(), e.getY(), color);
-            //paintingWindow.addDrawable(rectangle);
             Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableEllipse));
         }
     }
@@ -39,6 +36,7 @@ public class EllipseTool extends Tool {
     @Override
     public void processMouseUp(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
+            drawableEllipse.setFinished();
             drawableEllipse = null;
         }
     }

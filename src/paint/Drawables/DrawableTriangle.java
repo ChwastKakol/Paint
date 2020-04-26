@@ -5,6 +5,7 @@ import java.awt.*;
 public class DrawableTriangle extends Drawable {
     private final int origX, origY;
     private Polygon polygon;
+    private boolean isFinished = false;
 
     public DrawableTriangle(int x1, int y1, int x2, int y2, Color color){
         super();
@@ -17,24 +18,24 @@ public class DrawableTriangle extends Drawable {
     @Override
     public void draw(Graphics2D graphics2D) {
         graphics2D.setColor(color);
-        graphics2D.fill(polygon);
+        graphics2D.fill(isFinished ? shape : polygon);
     }
 
-    @Override
+    /*@Override
     public void translate(int dx, int dy) {
         polygon.translate(dx, dy);
-    }
+    }*/
 
-    @Override
+    /*@Override
     public Drawable clone() throws CloneNotSupportedException {
          DrawableTriangle copy = (DrawableTriangle) super.clone();
          copy.polygon = new Polygon(polygon.xpoints, polygon.ypoints, polygon.npoints);
          return copy;
-    }
+    }*/
 
     @Override
     public boolean contains(int x, int y) {
-        return polygon.contains(x, y);
+        return isFinished ? shape.contains(x,y) : polygon.contains(x, y);
     }
 
     public void setSecondPoint(int x, int y){
@@ -54,5 +55,21 @@ public class DrawableTriangle extends Drawable {
 
     protected Polygon createPolygon(int x1, int y1, int x2, int y2, boolean invert){
         return new Polygon(new int[]{x1, (x1 + x2)/2, x2}, (invert? new int[]{y2, y1, y2} : new int[]{y1, y2, y1}), 3);
+    }
+
+    public void setFinished() {
+        var frame = polygon.getBounds2D();
+        translationX = frame.getX() + frame.getWidth()/2;
+        translationY = frame.getY() + frame.getHeight()/2;
+        polygon.translate(-(int)translationX, -(int)translationY);
+
+        createAffineTransform();
+        shape = affineTransform.createTransformedShape(polygon);
+        isFinished = true;
+    }
+
+    @Override
+    protected void updateShape() {
+        shape = affineTransform.createTransformedShape(polygon);
     }
 }

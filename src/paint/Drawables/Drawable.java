@@ -14,16 +14,36 @@ public abstract class Drawable implements Serializable, Cloneable {
     protected Shape shape;
     protected Long ID;
 
+    protected double scale = 1;
+    protected double translationX = 0, translationY = 0;
+    protected double rotation = 0;
+
     public abstract void draw(Graphics2D graphics2D);
 
     public boolean contains(int x, int y){
         return false;
     }
 
-    public void translate(int dx, int dy){}
-    public void scale(double scale){}
-    public void setRotation(double rotation){}
-    public double getRotation(){return 0;}
+    public void translate(int dx, int dy){
+        translationX += dx;
+        translationY += dy;
+        createAffineTransform();
+        updateShape();
+    }
+    public void scale(double scale){
+        this.scale += scale;
+        createAffineTransform();
+        updateShape();
+    }
+    public void setRotation(double rotation){
+        this.rotation = rotation;
+        createAffineTransform();
+        updateShape();
+    }
+
+    public double getRotation(){
+        return rotation;
+    }
 
     public Point2D getCenter(){
         Point2D point2D = new Point();
@@ -41,6 +61,8 @@ public abstract class Drawable implements Serializable, Cloneable {
     public Drawable clone() throws CloneNotSupportedException{
         Drawable d = (Drawable) super.clone();
         d.color = new Color(this.color.getRGB());
+        d.affineTransform = new AffineTransform(this.affineTransform);
+        d.updateShape();
         return d;
     }
 
@@ -50,4 +72,13 @@ public abstract class Drawable implements Serializable, Cloneable {
     public void setID(Long ID) {
         this.ID = ID;
     }
+
+    protected void createAffineTransform(){
+        affineTransform = new AffineTransform();
+        affineTransform.translate(translationX, translationY);
+        affineTransform.rotate(rotation);
+        affineTransform.scale(scale, scale);
+    }
+
+    protected void updateShape(){};
 }
