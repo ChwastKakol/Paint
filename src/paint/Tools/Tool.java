@@ -9,6 +9,12 @@ import java.awt.event.MouseWheelEvent;
 public abstract class Tool {
     protected Color color;
 
+    protected Tool(){
+        setDescription();
+    }
+
+    protected void setDescription(){};
+
     public void setColor(Color color){
         this.color = color;
     }

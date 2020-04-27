@@ -216,8 +216,8 @@ public class MainDisplay extends JFrame{
         var helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
 
-        var infoMenuItem = new JMenuItem("Info");
-        helpMenu.add(infoMenuItem);
+        addMenuItem(helpMenu, "Info", 0, null, event -> showInfoWindow());
+        addMenuItem(helpMenu, "User Manual", 0 ,null, null);
 
         menuBar.add(fileMenu);
         menuBar.add(editMenu);
@@ -229,7 +229,7 @@ public class MainDisplay extends JFrame{
     private void createToolBar(){
         var toolBar = new JToolBar(JToolBar.VERTICAL);
 
-        var pointButton = new JButton();
+        var pointButton = new JButton(new ImageIcon("src/paint/resources/pointTool.png"));
         pointButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -259,7 +259,7 @@ public class MainDisplay extends JFrame{
         rectangleButton.setToolTipText("Draws a filled rectangle");
         toolBar.add(rectangleButton);
 
-        var ellipseButton = new JButton(new ImageIcon("src/paint/resources/rectangleTool.png"));
+        var ellipseButton = new JButton(new ImageIcon("src/paint/resources/ellipseTool.png"));
         ellipseButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -269,7 +269,7 @@ public class MainDisplay extends JFrame{
         ellipseButton.setToolTipText("Draws a filled ellipse");
         toolBar.add(ellipseButton);
 
-        var triangleButton = new JButton();
+        var triangleButton = new JButton(new ImageIcon("src/paint/resources/triangleTool.png"));
         triangleButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -280,13 +280,14 @@ public class MainDisplay extends JFrame{
         triangleButton.setToolTipText("Draws a filled triangle");
         toolBar.add(triangleButton);
 
-        var editButton = new JButton();
+        var editButton = new JButton(new ImageIcon("src/paint/resources/editTool.png"));
         editButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 tool = new EditTool(paintingWindow, color);
             }
         });
+        editButton.setToolTipText("Allows to select figure for copying, move, rotate, scale it and change its colour");
         toolBar.add(editButton);
 
         add(toolBar, BorderLayout.WEST);
@@ -304,7 +305,9 @@ public class MainDisplay extends JFrame{
             Icon icon = new ImageIcon(iconName);
             jMenuItem.setIcon(icon);
         }
-        jMenuItem.setAccelerator(KeyStroke.getKeyStroke(accelerator, InputEvent.CTRL_DOWN_MASK));
+        if(accelerator != 0) {
+            jMenuItem.setAccelerator(KeyStroke.getKeyStroke(accelerator, InputEvent.CTRL_DOWN_MASK));
+        }
         menu.add(jMenuItem);
     }
 
@@ -326,6 +329,11 @@ public class MainDisplay extends JFrame{
         catch (CloneNotSupportedException e){
             System.out.println(e);
         }
+    }
+
+    private void showInfoWindow(){
+        var infoWindow = new InfoWindow(this);
+        infoWindow.setVisible(true);
     }
 
 }

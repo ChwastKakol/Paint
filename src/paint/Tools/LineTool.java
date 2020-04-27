@@ -2,7 +2,7 @@ package paint.Tools;
 
 import paint.Application;
 import paint.Commands.AddDrawableCommand;
-import paint.Drawables.Line;
+import paint.Drawables.DrawableLine;
 import paint.PaintingWindow;
 
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
 
 public class LineTool extends Tool {
     private PaintingWindow paintingWindow;
-    private Line line;
+    private DrawableLine drawableLine;
 
     public LineTool(PaintingWindow paintingWindow, Color color){
         this.color = color;
@@ -20,16 +20,15 @@ public class LineTool extends Tool {
     @Override
     public void processMouseDown(MouseEvent e){
         if(e.getButton() == MouseEvent.BUTTON1){
-            line = new Line(e.getX(), e.getY(), e.getX(), e.getY(), color);
-            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, line));
+            drawableLine = new DrawableLine(e.getX(), e.getY(), e.getX(), e.getY(), color);
+            Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow, drawableLine));
         }
     }
 
     @Override
     public void processMouseDragged(MouseEvent e) {
-        if(line != null){
-            line.x2 = e.getX();
-            line.y2 = e.getY();
+        if(drawableLine != null){
+            drawableLine.setSecondPoint(e.getX(), e.getY());
         }
         paintingWindow.redraw();
     }
@@ -37,7 +36,8 @@ public class LineTool extends Tool {
     @Override
     public void processMouseUp(MouseEvent e) {
         if(e.getButton() == MouseEvent.BUTTON1){
-            line = null;
+            drawableLine.setFinished();
+            drawableLine = null;
         }
     }
 }
