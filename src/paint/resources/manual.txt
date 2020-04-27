@@ -1,0 +1,19 @@
+<html>
+General:<br>
+    &emsp;Press Right mouse button to access color choosing menu - it will set the color of all subsequently drawn figures<br>
+<br>
+Tools:<br>
+    &emsp;PointTool: Press Left mouse Button to draw a single point<br>
+    &emsp;LineTool: Press left mouse Button and drag it to draw a strait line<br>
+    &emsp;RectangleTool: Press left mouse Button and drag it to draw a filled rectangle<br>
+    &emsp;EllipseTool: Press left mouse Button and drag it to draw a filled ellipse<br>
+    &emsp;TriangleTool: Press left mouse Button and drag it to draw a filled triangle<br>
+    &emsp;EditTool:<br>
+              &emsp;&emsp;Press left mouse Button on a figure and drag it to move the selected figure<br>
+              &emsp;&emsp;Press right mouse Button on a figure to set its color to currently selected one<br>
+              &emsp;&emsp;Press mouse wheel on a figure and drag it to rotate the selected figure around its center<br>
+              &emsp;&emsp;Rotate mouse wheel whilst hovering over a figure to scale it<br>
+<br>
+              &emsp;&emsp;Selected figure may be copied (and pasted), cut and deleted using Edit menu or with keyboard shortcuts
+</html>
+

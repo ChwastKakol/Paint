@@ -2,8 +2,18 @@ package paint.Drawables;
 
 import java.awt.*;
 
+/**
+ * Drawable Point
+ */
 public class Point extends Drawable {
     private int x, y;
+
+    /**
+     * Constructor
+     * @param x x coordinate
+     * @param y y coordinate
+     * @param color color of the point
+     */
     public Point(int x, int y, Color color){
         super();
         this.color = new Color(color.getRGB());

@@ -5,10 +5,21 @@ import java.awt.Point;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 
+/**
+ * Drawable Line Class
+ */
 public class DrawableLine extends Drawable {
     private Line2D line2D;
     private boolean isFinished = false;
 
+    /**
+     * Constructor
+     * @param x1 x coordinate of origin point
+     * @param y1 y coordinate of origin point
+     * @param x2 x coordinate of second point
+     * @param y2 y coordinate of second point
+     * @param color color of the line
+     */
     public DrawableLine(int x1, int y1, int x2, int y2, Color color){
         super();
         setColor(color);
@@ -21,6 +32,11 @@ public class DrawableLine extends Drawable {
         graphics2D.draw(isFinished ? shape : line2D);
     }
 
+    /**
+     * sets the position of the second point defining the line (non orign)
+     * @param x x coordinate of second point
+     * @param y y coordinate of second point
+     */
     public void setSecondPoint(int x, int y){
         line2D.setLine(line2D.getP1(), new Point(x, y));
     }
@@ -36,6 +52,9 @@ public class DrawableLine extends Drawable {
         }
     }
 
+    /**
+     * Declares figure to be complete, ie not editable by <code>setSecondPoint()</code>
+     */
     public void setFinished(){
         var frame = line2D.getBounds2D();
         translationX = frame.getX() + frame.getWidth()/2;

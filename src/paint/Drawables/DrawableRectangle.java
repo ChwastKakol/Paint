@@ -3,11 +3,22 @@ package paint.Drawables;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 
+/**
+ * Drawable Rectangle class
+ */
 public class DrawableRectangle extends Drawable {
     private final int origX, origY;
     private boolean isFinished = false;
     private Rectangle rectangle;
 
+    /**
+     * Constructor
+     * @param x1 x coordinate of south-west rectangle corner, origin x
+     * @param y1 y coordinate of south-west rectangle corner, origin y
+     * @param x2 x coordinate of north-east rectangle corner
+     * @param y2 y coordinate of north-east rectangle corner
+     * @param color color of the rectangle
+     */
     public DrawableRectangle(int x1, int y1, int x2, int y2, Color color){
         super();
         rectangle = new Rectangle(x1, y1, x2-x1, y2 -y1);
@@ -35,6 +46,11 @@ public class DrawableRectangle extends Drawable {
         return isFinished ? shape.contains(x, y) : rectangle.contains(x, y);
     }
 
+    /**
+     * sets the position of the second point defining the rectangle (non orign)
+     * @param x x coordinate of second point
+     * @param y y coordinate of second point
+     */
     public void setSecondPoint(int x, int y){
         if((x < origX) && (y < origY)){
             rectangle.setSize(origX - x, origY - y);
@@ -53,6 +69,9 @@ public class DrawableRectangle extends Drawable {
         }
     }
 
+    /**
+     * Declares figure to be complete, ie not editable by <code>setSecondPoint()</code>
+     */
     public void setFinished(){
         translationX = rectangle.getX() + rectangle.getWidth()/2;
         translationY = rectangle.getY() + rectangle.getHeight()/2;

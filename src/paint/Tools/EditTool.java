@@ -10,6 +10,9 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.awt.geom.Point2D;
 
+/**
+ * Tool allowing to edit existing figures
+ */
 public class EditTool extends Tool {
     private static final double mouseWheelSensitivity = .1d;
     private Drawable drawable;
@@ -22,11 +25,23 @@ public class EditTool extends Tool {
     private double rotation = 0;
     private Point2D rotationOrigin;
 
+    /**
+     * Construcotr
+     * @param paintingWindow painting window in which the figure is to be edited
+     * @param color primary color of the tool
+     */
     public EditTool(PaintingWindow paintingWindow, Color color){
         this.paintingWindow = paintingWindow;
         this.color = color;
     }
 
+    /**
+     * Initializes action depending on what mouse button was pressed over existing figure
+     * left mouse button - movement
+     * right mouse button - changes color
+     * middle mouse button - rotation
+     * @param e mouseEvent to be processed
+     */
     @Override
     public void processMouseDown(MouseEvent e) {
         drawable = paintingWindow.getCollidedDrawable(e.getX(), e.getY());
@@ -50,6 +65,10 @@ public class EditTool extends Tool {
         }
     }
 
+    /**
+     * if left mouse is dragged continues movement, if middle continues rotation
+     * @param e mouseEvent
+     */
     @Override
     public void processMouseDragged(MouseEvent e) {
         if(drawable != null && mouseButton == MouseEvent.BUTTON1){
@@ -65,6 +84,10 @@ public class EditTool extends Tool {
         }
     }
 
+    /**
+     * finishes editing action
+     * @param e mouseEvent to be processed
+     */
     @Override
     public void processMouseUp(MouseEvent e) {
         if(drawable != null && command != null) {
@@ -80,6 +103,10 @@ public class EditTool extends Tool {
         mouseButton = 0;
     }
 
+    /**
+     * scales figure over which the mouse was hovering while it was rotated
+     * @param e mouseEvent to be processed
+     */
     @Override
     public void processMouseWheel(MouseWheelEvent e) {
         if(drawable != null){

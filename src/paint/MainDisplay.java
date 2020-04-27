@@ -14,6 +14,9 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * Main display window of the application
+ */
 public class MainDisplay extends JFrame{
 
     JPopupMenu popupMenu;
@@ -22,10 +25,16 @@ public class MainDisplay extends JFrame{
     PaintingWindow paintingWindow;
     Tool tool;
 
+    /**
+     * Default constructor
+     */
     public MainDisplay(){
         init();
     }
 
+    /**
+     * Initializer method called by the constructor
+     */
     private void init(){
         setTitle("Paint | " + Application.getInstance().getCurrentFileName());
 
@@ -75,6 +84,9 @@ public class MainDisplay extends JFrame{
         createToolBar();
     }
 
+    /**
+     * Creates color selector popup menu
+     */
     private void createPopupMenu(){
         popupMenu = new JPopupMenu();
         var chooseColorMenuItem = new JMenuItem("Choose Color");
@@ -86,138 +98,38 @@ public class MainDisplay extends JFrame{
         popupMenu.add(chooseColorMenuItem);
     }
 
+    /**
+     * Creates Menu Bar
+     */
     private void createMenus(){
         var menuBar = new JMenuBar();
 
         var fileMenu = new JMenu("File");
         fileMenu.setMnemonic(KeyEvent.VK_F);
 
-        addMenuItem(fileMenu, "New", KeyEvent.VK_N, "src/paint/resources/new.png", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                paintingWindow.resetCanvas();
-            }
-        });
-        addMenuItem(fileMenu, "Save", KeyEvent.VK_S, "src/paint/resources/save-24px.png", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                var panel = new JPanel();
-                var fileChooser= new JFileChooser();
-                var filter = new FileNameExtensionFilter("Paint files", "pnt");
-                fileChooser.addChoosableFileFilter(filter);
-
-                int ret = fileChooser.showSaveDialog(panel);
-                if(ret == JFileChooser.APPROVE_OPTION){
-                    var file = fileChooser.getSelectedFile();
-
-                    try{
-                        FileOutputStream fileOutputStream = new FileOutputStream(file);
-                        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                        objectOutputStream.writeObject(paintingWindow.getDrawables());
-                    }
-                    catch (IOException e){
-                        System.out.println(e.getLocalizedMessage());
-                    }
-
-                    Application.getInstance().saveFile(file);
-                    setTitle("Paint | " + Application.getInstance().getCurrentFileName());
-                }
-            }
-        });
-        addMenuItem(fileMenu, "Open", KeyEvent.VK_O, "src/paint/resources/open.png", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                var panel = new JPanel();
-                var fileChooser = new JFileChooser();
-                var filter = new FileNameExtensionFilter("Paint files", "pnt");
-                fileChooser.addChoosableFileFilter(filter);
-
-                int ret = fileChooser.showOpenDialog(panel);
-                if(ret == JFileChooser.APPROVE_OPTION){
-                    var file = fileChooser.getSelectedFile();
-
-                    try {
-                        FileInputStream fileInputStream = new FileInputStream(file);
-                        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                        paintingWindow.setDrawables((ArrayList<Drawable>)objectInputStream.readObject());
-                    }
-                    catch(IOException e){
-                        System.out.println(e.getLocalizedMessage());
-                    }
-                    catch (ClassNotFoundException e){
-                        System.out.println(e.getLocalizedMessage());
-                    }
-
-                    Application.getInstance().saveFile(file);
-                    setTitle("Paint | " + Application.getInstance().getCurrentFileName());
-                }
-            }
-        });
+        addMenuItem(fileMenu, "New", KeyEvent.VK_N, "src/paint/resources/new.png", event -> paintingWindow.resetCanvas());
+        addMenuItem(fileMenu, "Save", KeyEvent.VK_S, "src/paint/resources/save-24px.png", event -> save());
+        addMenuItem(fileMenu, "Open", KeyEvent.VK_O, "src/paint/resources/open.png", event -> open());
         fileMenu.addSeparator();
-        addMenuItem(fileMenu,"Exit", KeyEvent.VK_E, "src/paint/resources/close.png", null);
+        addMenuItem(fileMenu,"Exit", KeyEvent.VK_E, "src/paint/resources/close.png", event -> dispose());
 
         var editMenu = new JMenu("Edit");
         editMenu.setMnemonic(KeyEvent.VK_E);
 
-        addMenuItem(editMenu, "Undo", KeyEvent.VK_Z, null, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Application.getInstance().undo();
-            }
-        });
-        addMenuItem(editMenu, "Redo", KeyEvent.VK_Y, null, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Application.getInstance().redo();
-            }
-        });
+        addMenuItem(editMenu, "Undo", KeyEvent.VK_Z, null, event -> Application.getInstance().undo());
+        addMenuItem(editMenu, "Redo", KeyEvent.VK_Y, null, event -> Application.getInstance().redo());
         editMenu.addSeparator();
-        addMenuItem(editMenu, "Cut", KeyEvent.VK_X, null, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                setClipBoard(tool.getSelected());
-                if(tool.getSelected() != null){
-                    Application.getInstance().addCommand(new DeleteDrawableCommand(paintingWindow, tool.getSelected()));
-                }
-            }
-        });
-        addMenuItem(editMenu, "Copy", KeyEvent.VK_C, null, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                setClipBoard(tool.getSelected());
-            }
-        });
-        addMenuItem(editMenu, "Paste", KeyEvent.VK_V, null, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                if(clipBoard != null){
-                    try {
-                        Drawable copy = clipBoard.clone();
-                        copy.setID(Application.getInstance().getNewID());
-                        copy.translate(5,5);
-                        Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow,copy));
-                    }
-                    catch (CloneNotSupportedException e){
-                        System.out.println(e.getLocalizedMessage());
-                    }
-                }
-            }
-        });
+        addMenuItem(editMenu, "Cut", KeyEvent.VK_X, null, event -> cut());
+        addMenuItem(editMenu, "Copy", KeyEvent.VK_C, null, event -> setClipBoard(tool.getSelected()));
+        addMenuItem(editMenu, "Paste", KeyEvent.VK_V, null, event -> paste());
         editMenu.addSeparator();
-        addMenuItemNoCtrl(editMenu, "Delete", KeyEvent.VK_DELETE, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                if(tool.getSelected() != null){
-                    Application.getInstance().addCommand(new DeleteDrawableCommand(paintingWindow, tool.getSelected()));
-                }
-            }
-        });
+        addMenuItemNoCtrl(editMenu, "Delete", KeyEvent.VK_DELETE, event -> delete());
 
         var helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
 
         addMenuItem(helpMenu, "Info", 0, null, event -> showInfoWindow());
-        addMenuItem(helpMenu, "User Manual", 0 ,null, null);
+        addMenuItem(helpMenu, "User Manual", 0 ,null, event -> showUserManualWindow());
 
         menuBar.add(fileMenu);
         menuBar.add(editMenu);
@@ -226,6 +138,9 @@ public class MainDisplay extends JFrame{
         setJMenuBar(menuBar);
     }
 
+    /**
+     * Creates Tool Bar
+     */
     private void createToolBar(){
         var toolBar = new JToolBar(JToolBar.VERTICAL);
 
@@ -293,6 +208,14 @@ public class MainDisplay extends JFrame{
         add(toolBar, BorderLayout.WEST);
     }
 
+    /**
+     * Method for adding button to menu
+     * @param menu menu to add button to
+     * @param text button text
+     * @param accelerator keyboard shortcut to access button's function, 0 sets no shortcut
+     * @param iconName address of icon for the button, null sets no icon
+     * @param actionListener action to be performed after clicking, null sets it to create dialogue message
+     */
     void addMenuItem(JMenu menu, String text, int accelerator, String iconName, ActionListener actionListener){
         var jMenuItem = new JMenuItem(text);
         if(actionListener != null){
@@ -311,6 +234,13 @@ public class MainDisplay extends JFrame{
         menu.add(jMenuItem);
     }
 
+    /**
+     * Method for adding button to menu, with keyboard shortcut without CTRL
+     * @param menu menu to add button to
+     * @param text button text
+     * @param accelerator keyboard shortcut to access button's function
+     * @param actionListener action to be performed after clicking, null sets it to create dialogue message
+     */
     void addMenuItemNoCtrl(JMenu menu, String text, int accelerator, ActionListener actionListener){
         var jMenuItem = new JMenuItem(text);
         jMenuItem.setAccelerator(KeyStroke.getKeyStroke(accelerator, 0));
@@ -331,9 +261,111 @@ public class MainDisplay extends JFrame{
         }
     }
 
+    /**
+     * Shows Information Dialogue window
+     */
     private void showInfoWindow(){
         var infoWindow = new InfoWindow(this);
         infoWindow.setVisible(true);
+    }
+
+    /**
+     * Shows User Manual Window
+     */
+    private void showUserManualWindow(){
+        var manualWindow = new UserManualWindow(this);
+        manualWindow.setVisible(true);
+    }
+
+    /**
+     * Saves the content of paintingWindow
+     */
+    private void save(){
+        var fileChooser= new JFileChooser();
+        var filter = new FileNameExtensionFilter("Paint files", "pnt");
+        fileChooser.addChoosableFileFilter(filter);
+
+        int ret = fileChooser.showSaveDialog(this);
+        if(ret == JFileChooser.APPROVE_OPTION){
+            var file = fileChooser.getSelectedFile();
+
+            try{
+                FileOutputStream fileOutputStream = new FileOutputStream(file);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                objectOutputStream.writeObject(paintingWindow.getDrawables());
+            }
+            catch (IOException e){
+                System.out.println(e.getLocalizedMessage());
+            }
+
+            Application.getInstance().saveFile(file);
+            setTitle("Paint | " + Application.getInstance().getCurrentFileName());
+        }
+    }
+
+    /**
+     * Loads content of the painting window from file
+     */
+    private void open(){
+        var fileChooser = new JFileChooser();
+        var filter = new FileNameExtensionFilter("Paint files", "pnt");
+        fileChooser.addChoosableFileFilter(filter);
+
+        int ret = fileChooser.showOpenDialog(this);
+        if(ret == JFileChooser.APPROVE_OPTION){
+            var file = fileChooser.getSelectedFile();
+
+            try {
+                FileInputStream fileInputStream = new FileInputStream(file);
+                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                paintingWindow.setDrawables((ArrayList<Drawable>)objectInputStream.readObject());
+            }
+            catch(IOException e){
+                System.out.println(e.getLocalizedMessage());
+            }
+            catch (ClassNotFoundException e){
+                System.out.println(e.getLocalizedMessage());
+            }
+
+            Application.getInstance().saveFile(file);
+            setTitle("Paint | " + Application.getInstance().getCurrentFileName());
+        }
+    }
+
+    /**
+     * Cuts the drawable figure from painting window
+     */
+    private void cut(){
+        setClipBoard(tool.getSelected());
+        if(tool.getSelected() != null){
+            Application.getInstance().addCommand(new DeleteDrawableCommand(paintingWindow, tool.getSelected()));
+        }
+    }
+
+    /**
+     * Pastes the drawable figure from painting window
+     */
+    private void paste(){
+        if(clipBoard != null){
+            try {
+                Drawable copy = clipBoard.clone();
+                copy.setID(Application.getInstance().getNewID());
+                copy.translate(5,5);
+                Application.getInstance().addCommand(new AddDrawableCommand(paintingWindow,copy));
+            }
+            catch (CloneNotSupportedException e){
+                System.out.println(e.getLocalizedMessage());
+            }
+        }
+    }
+
+    /**
+     * Deletes the drawable figure from painting window
+     */
+    private void delete(){
+        if(tool.getSelected() != null){
+            Application.getInstance().addCommand(new DeleteDrawableCommand(paintingWindow, tool.getSelected()));
+        }
     }
 
 }
