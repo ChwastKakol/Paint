@@ -1,0 +1,191 @@
+\hypertarget{classpaint_1_1_application}{}\doxysection{paint.\+Application Class Reference}
+\label{classpaint_1_1_application}\index{paint.Application@{paint.Application}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Long \mbox{\hyperlink{classpaint_1_1_application_ad8f16580777cddf378060b17bf8c162d}{get\+New\+ID}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_abf547987a83cd809f878155db6d434fd}{undo}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_a206dfa75906a73510e854845a8f9a97a}{redo}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_a3731e8f6e27100c757af6fe4c752554c}{add\+Command}} (\mbox{\hyperlink{classpaint_1_1_commands_1_1_command}{Command}} command)
+\item 
+String \mbox{\hyperlink{classpaint_1_1_application_acff1af27ef640a74743daf7448484bad}{get\+Current\+File\+Name}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_ab5000544831113c34e456d6fb57d758a}{set\+Current\+File\+Name}} (String \mbox{\hyperlink{classpaint_1_1_application_a83d4e73777616b8f97810f6756741702}{current\+File\+Name}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_a9dbfe405cbfb64125b40fb438b1b4937}{save\+File}} (File file)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_a2926dfdc47d1acaf0e990245fc0b9e1d}{load\+File}} (File file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpaint_1_1_application}{Application}} \mbox{\hyperlink{classpaint_1_1_application_a72b6de72e8f3f99f9269406e55489507}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_application_a540b587305dccdc0646db0dc2c3c749d}{Application}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_application_aef4816f559466e58e780fd19fb9686f0}{delete\+Elements\+After\+Pointer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classpaint_1_1_application_a83d4e73777616b8f97810f6756741702}{current\+File\+Name}}
+\item 
+int \mbox{\hyperlink{classpaint_1_1_application_a6ca5110cc454e3ad3b9c71395b381c8e}{undo\+Redo\+Pointer}} = -\/1
+\item 
+Stack$<$ \mbox{\hyperlink{classpaint_1_1_commands_1_1_command}{Command}} $>$ \mbox{\hyperlink{classpaint_1_1_application_abb5ad7a13d23fc7454fc89e61389ee4d}{command\+Stack}} = new Stack$<$\mbox{\hyperlink{classpaint_1_1_commands_1_1_command}{Command}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final \mbox{\hyperlink{classpaint_1_1_application}{Application}} \mbox{\hyperlink{classpaint_1_1_application_a88025bc7a43feef59c58daa7eb8035a9}{instance}} = new \mbox{\hyperlink{classpaint_1_1_application}{Application}}()
+\item 
+static Long \mbox{\hyperlink{classpaint_1_1_application_a96e56544312bf611d45fc483e42e236a}{ID}} = 1L
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class acting as the application master 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_application_a540b587305dccdc0646db0dc2c3c749d}\label{classpaint_1_1_application_a540b587305dccdc0646db0dc2c3c749d}} 
+\index{paint.Application@{paint.Application}!Application@{Application}}
+\index{Application@{Application}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily paint.\+Application.\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_application_a3731e8f6e27100c757af6fe4c752554c}\label{classpaint_1_1_application_a3731e8f6e27100c757af6fe4c752554c}} 
+\index{paint.Application@{paint.Application}!addCommand@{addCommand}}
+\index{addCommand@{addCommand}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{addCommand()}{addCommand()}}
+{\footnotesize\ttfamily void paint.\+Application.\+add\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpaint_1_1_commands_1_1_command}{Command}}}]{command }\end{DoxyParamCaption})}
+
+Adds command to the stack 
+\begin{DoxyParams}{Parameters}
+{\em command} & command to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_application_aef4816f559466e58e780fd19fb9686f0}\label{classpaint_1_1_application_aef4816f559466e58e780fd19fb9686f0}} 
+\index{paint.Application@{paint.Application}!deleteElementsAfterPointer@{deleteElementsAfterPointer}}
+\index{deleteElementsAfterPointer@{deleteElementsAfterPointer}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{deleteElementsAfterPointer()}{deleteElementsAfterPointer()}}
+{\footnotesize\ttfamily void paint.\+Application.\+delete\+Elements\+After\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Deletes all command chronologically after the pointer \mbox{\Hypertarget{classpaint_1_1_application_acff1af27ef640a74743daf7448484bad}\label{classpaint_1_1_application_acff1af27ef640a74743daf7448484bad}} 
+\index{paint.Application@{paint.Application}!getCurrentFileName@{getCurrentFileName}}
+\index{getCurrentFileName@{getCurrentFileName}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{getCurrentFileName()}{getCurrentFileName()}}
+{\footnotesize\ttfamily String paint.\+Application.\+get\+Current\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets name of the file that is being worked on \begin{DoxyReturn}{Returns}
+name of the file that is being worked on 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_application_a72b6de72e8f3f99f9269406e55489507}\label{classpaint_1_1_application_a72b6de72e8f3f99f9269406e55489507}} 
+\index{paint.Application@{paint.Application}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classpaint_1_1_application}{Application}} paint.\+Application.\+get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets instance of the application \begin{DoxyReturn}{Returns}
+instance of the application 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_application_ad8f16580777cddf378060b17bf8c162d}\label{classpaint_1_1_application_ad8f16580777cddf378060b17bf8c162d}} 
+\index{paint.Application@{paint.Application}!getNewID@{getNewID}}
+\index{getNewID@{getNewID}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{getNewID()}{getNewID()}}
+{\footnotesize\ttfamily Long paint.\+Application.\+get\+New\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Distributes unique I\+Ds \begin{DoxyReturn}{Returns}
+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_application_a2926dfdc47d1acaf0e990245fc0b9e1d}\label{classpaint_1_1_application_a2926dfdc47d1acaf0e990245fc0b9e1d}} 
+\index{paint.Application@{paint.Application}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily void paint.\+Application.\+load\+File (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+Method called during file loading 
+\begin{DoxyParams}{Parameters}
+{\em file} & file from which content is loaded \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_application_a206dfa75906a73510e854845a8f9a97a}\label{classpaint_1_1_application_a206dfa75906a73510e854845a8f9a97a}} 
+\index{paint.Application@{paint.Application}!redo@{redo}}
+\index{redo@{redo}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void paint.\+Application.\+redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Repeats the last command \mbox{\Hypertarget{classpaint_1_1_application_a9dbfe405cbfb64125b40fb438b1b4937}\label{classpaint_1_1_application_a9dbfe405cbfb64125b40fb438b1b4937}} 
+\index{paint.Application@{paint.Application}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily void paint.\+Application.\+save\+File (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+Method called during file saving 
+\begin{DoxyParams}{Parameters}
+{\em file} & file to which current work is saved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_application_ab5000544831113c34e456d6fb57d758a}\label{classpaint_1_1_application_ab5000544831113c34e456d6fb57d758a}} 
+\index{paint.Application@{paint.Application}!setCurrentFileName@{setCurrentFileName}}
+\index{setCurrentFileName@{setCurrentFileName}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{setCurrentFileName()}{setCurrentFileName()}}
+{\footnotesize\ttfamily void paint.\+Application.\+set\+Current\+File\+Name (\begin{DoxyParamCaption}\item[{String}]{current\+File\+Name }\end{DoxyParamCaption})}
+
+Sets the name of the file that is being worked on 
+\begin{DoxyParams}{Parameters}
+{\em current\+File\+Name} & name of the file that is being worked on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_application_abf547987a83cd809f878155db6d434fd}\label{classpaint_1_1_application_abf547987a83cd809f878155db6d434fd}} 
+\index{paint.Application@{paint.Application}!undo@{undo}}
+\index{undo@{undo}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void paint.\+Application.\+undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cancels the last command 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_application_abb5ad7a13d23fc7454fc89e61389ee4d}\label{classpaint_1_1_application_abb5ad7a13d23fc7454fc89e61389ee4d}} 
+\index{paint.Application@{paint.Application}!commandStack@{commandStack}}
+\index{commandStack@{commandStack}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{commandStack}{commandStack}}
+{\footnotesize\ttfamily Stack$<$\mbox{\hyperlink{classpaint_1_1_commands_1_1_command}{Command}}$>$ paint.\+Application.\+command\+Stack = new Stack$<$\mbox{\hyperlink{classpaint_1_1_commands_1_1_command}{Command}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_application_a83d4e73777616b8f97810f6756741702}\label{classpaint_1_1_application_a83d4e73777616b8f97810f6756741702}} 
+\index{paint.Application@{paint.Application}!currentFileName@{currentFileName}}
+\index{currentFileName@{currentFileName}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{currentFileName}{currentFileName}}
+{\footnotesize\ttfamily String paint.\+Application.\+current\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_application_a96e56544312bf611d45fc483e42e236a}\label{classpaint_1_1_application_a96e56544312bf611d45fc483e42e236a}} 
+\index{paint.Application@{paint.Application}!ID@{ID}}
+\index{ID@{ID}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily Long paint.\+Application.\+ID = 1L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_application_a88025bc7a43feef59c58daa7eb8035a9}\label{classpaint_1_1_application_a88025bc7a43feef59c58daa7eb8035a9}} 
+\index{paint.Application@{paint.Application}!instance@{instance}}
+\index{instance@{instance}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{classpaint_1_1_application}{Application}} paint.\+Application.\+instance = new \mbox{\hyperlink{classpaint_1_1_application}{Application}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_application_a6ca5110cc454e3ad3b9c71395b381c8e}\label{classpaint_1_1_application_a6ca5110cc454e3ad3b9c71395b381c8e}} 
+\index{paint.Application@{paint.Application}!undoRedoPointer@{undoRedoPointer}}
+\index{undoRedoPointer@{undoRedoPointer}!paint.Application@{paint.Application}}
+\doxysubsubsection{\texorpdfstring{undoRedoPointer}{undoRedoPointer}}
+{\footnotesize\ttfamily int paint.\+Application.\+undo\+Redo\+Pointer = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\mbox{\hyperlink{_application_8java}{Application.\+java}}\end{DoxyCompactItemize}

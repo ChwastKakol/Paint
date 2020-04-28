@@ -1,0 +1,114 @@
+\hypertarget{classpaint_1_1_tools_1_1_ellipse_tool}{}\doxysection{paint.\+Tools.\+Ellipse\+Tool Class Reference}
+\label{classpaint_1_1_tools_1_1_ellipse_tool}\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+Inheritance diagram for paint.\+Tools.\+Ellipse\+Tool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpaint_1_1_tools_1_1_ellipse_tool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_addaab7f902a4676782dfad91febe78fe}{Ellipse\+Tool}} (\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a59a9944060e35b54eb55d461bed7fe90}{painting\+Window}}, Color \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}{color}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a8802e857f77ea962828d696777f682a2}{process\+Mouse\+Down}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a6bec3d13c8da86f1e83e6869069736aa}{process\+Mouse\+Dragged}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_aeeb6069d6c22deb8be5c1805230591d4}{process\+Mouse\+Up}} (Mouse\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a59a9944060e35b54eb55d461bed7fe90}{painting\+Window}}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ellipse}{Drawable\+Ellipse}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a388b8ec29cbeb879dc6f1a8e9b7f9a43}{drawable\+Ellipse}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classpaint_1_1_tools_1_1_tool}{Tool}} allowing to create a drawable ellipse 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_ellipse_tool_addaab7f902a4676782dfad91febe78fe}\label{classpaint_1_1_tools_1_1_ellipse_tool_addaab7f902a4676782dfad91febe78fe}} 
+\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}!EllipseTool@{EllipseTool}}
+\index{EllipseTool@{EllipseTool}!paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+\doxysubsubsection{\texorpdfstring{EllipseTool()}{EllipseTool()}}
+{\footnotesize\ttfamily paint.\+Tools.\+Ellipse\+Tool.\+Ellipse\+Tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}}}]{painting\+Window,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em painting\+Window} & painting window in which the ellipse is to be created \\
+\hline
+{\em color} & the color in which the ellipse will be created \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_ellipse_tool_a8802e857f77ea962828d696777f682a2}\label{classpaint_1_1_tools_1_1_ellipse_tool_a8802e857f77ea962828d696777f682a2}} 
+\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}!processMouseDown@{processMouseDown}}
+\index{processMouseDown@{processMouseDown}!paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+\doxysubsubsection{\texorpdfstring{processMouseDown()}{processMouseDown()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Ellipse\+Tool.\+process\+Mouse\+Down (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+If Left mouse button was pressed creates ellipse with origin in specified location 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab5b81e65a8c737ee71642141ea48e114}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_ellipse_tool_a6bec3d13c8da86f1e83e6869069736aa}\label{classpaint_1_1_tools_1_1_ellipse_tool_a6bec3d13c8da86f1e83e6869069736aa}} 
+\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}!processMouseDragged@{processMouseDragged}}
+\index{processMouseDragged@{processMouseDragged}!paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+\doxysubsubsection{\texorpdfstring{processMouseDragged()}{processMouseDragged()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Ellipse\+Tool.\+process\+Mouse\+Dragged (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Drags the second point of the ellipse to specified location 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab159366b71eb7f26fc812a1102b97a35}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_ellipse_tool_aeeb6069d6c22deb8be5c1805230591d4}\label{classpaint_1_1_tools_1_1_ellipse_tool_aeeb6069d6c22deb8be5c1805230591d4}} 
+\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}!processMouseUp@{processMouseUp}}
+\index{processMouseUp@{processMouseUp}!paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+\doxysubsubsection{\texorpdfstring{processMouseUp()}{processMouseUp()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Ellipse\+Tool.\+process\+Mouse\+Up (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Finishes creation of ellipse 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_a7768c0dc8c7c7987b06650c649cf9ee3}{paint.\+Tools.\+Tool}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_ellipse_tool_a388b8ec29cbeb879dc6f1a8e9b7f9a43}\label{classpaint_1_1_tools_1_1_ellipse_tool_a388b8ec29cbeb879dc6f1a8e9b7f9a43}} 
+\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}!drawableEllipse@{drawableEllipse}}
+\index{drawableEllipse@{drawableEllipse}!paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+\doxysubsubsection{\texorpdfstring{drawableEllipse}{drawableEllipse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ellipse}{Drawable\+Ellipse}} paint.\+Tools.\+Ellipse\+Tool.\+drawable\+Ellipse\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_ellipse_tool_a59a9944060e35b54eb55d461bed7fe90}\label{classpaint_1_1_tools_1_1_ellipse_tool_a59a9944060e35b54eb55d461bed7fe90}} 
+\index{paint.Tools.EllipseTool@{paint.Tools.EllipseTool}!paintingWindow@{paintingWindow}}
+\index{paintingWindow@{paintingWindow}!paint.Tools.EllipseTool@{paint.Tools.EllipseTool}}
+\doxysubsubsection{\texorpdfstring{paintingWindow}{paintingWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} paint.\+Tools.\+Ellipse\+Tool.\+painting\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Tools/\mbox{\hyperlink{_ellipse_tool_8java}{Ellipse\+Tool.\+java}}\end{DoxyCompactItemize}

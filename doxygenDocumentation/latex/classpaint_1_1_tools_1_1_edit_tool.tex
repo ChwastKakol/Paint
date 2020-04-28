@@ -1,0 +1,208 @@
+\hypertarget{classpaint_1_1_tools_1_1_edit_tool}{}\doxysection{paint.\+Tools.\+Edit\+Tool Class Reference}
+\label{classpaint_1_1_tools_1_1_edit_tool}\index{paint.Tools.EditTool@{paint.Tools.EditTool}}
+Inheritance diagram for paint.\+Tools.\+Edit\+Tool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpaint_1_1_tools_1_1_edit_tool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a3d9daef7b9a9ee81da1e8ebae9a0462e}{Edit\+Tool}} (\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a0af828aa48ba8b1a91c7f0e1d24c0540}{painting\+Window}}, Color \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}{color}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_acd04b961d4475350b15d88b403f7ef66}{process\+Mouse\+Down}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a9e389e16321cec672e5f444fed867aed}{process\+Mouse\+Dragged}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a8b5a3d7972fb7ed8b2943ea53131df66}{process\+Mouse\+Up}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_aa6a56e6ef4040354a266fe7c831563d9}{process\+Mouse\+Wheel}} (Mouse\+Wheel\+Event e)
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_adec20912c2f14b0911368192c76ea38e}{get\+Selected}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a664cb5ad8475c30079d883a37d6f0331}{y}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a78be29e64d5934512006d28666690ba6}{drawable}}
+\item 
+int \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a07b3e1848b479464ddcb77019f202a76}{x}}
+\item 
+\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a0af828aa48ba8b1a91c7f0e1d24c0540}{painting\+Window}}
+\item 
+\mbox{\hyperlink{classpaint_1_1_commands_1_1_edit_drawable_command}{Edit\+Drawable\+Command}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a4ab2a6e1cd8ef8d76cea1e117d6fb3de}{command}}
+\item 
+int \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a723bf15937bb3cbbbe299c14dd121b64}{mouse\+Button}} = 0
+\item 
+double \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_ac8aab9996b6a14565ab3ae87450a29d5}{rotation}} = 0
+\item 
+Point2D \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a492939726993078132b5f208204ae398}{rotation\+Origin}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final double \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a1c7d3945caa3c754420bc1c96536e27b}{mouse\+Wheel\+Sensitivity}} = .\+1d
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classpaint_1_1_tools_1_1_tool}{Tool}} allowing to edit existing figures 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a3d9daef7b9a9ee81da1e8ebae9a0462e}\label{classpaint_1_1_tools_1_1_edit_tool_a3d9daef7b9a9ee81da1e8ebae9a0462e}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!EditTool@{EditTool}}
+\index{EditTool@{EditTool}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{EditTool()}{EditTool()}}
+{\footnotesize\ttfamily paint.\+Tools.\+Edit\+Tool.\+Edit\+Tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}}}]{painting\+Window,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Construcotr 
+\begin{DoxyParams}{Parameters}
+{\em painting\+Window} & painting window in which the figure is to be edited \\
+\hline
+{\em color} & primary color of the tool \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_adec20912c2f14b0911368192c76ea38e}\label{classpaint_1_1_tools_1_1_edit_tool_adec20912c2f14b0911368192c76ea38e}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!getSelected@{getSelected}}
+\index{getSelected@{getSelected}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{getSelected()}{getSelected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} paint.\+Tools.\+Edit\+Tool.\+get\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the object selected by the tool \begin{DoxyReturn}{Returns}
+selected object 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_aa7063a052f8671d1bca516e96ed0bfd5}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_acd04b961d4475350b15d88b403f7ef66}\label{classpaint_1_1_tools_1_1_edit_tool_acd04b961d4475350b15d88b403f7ef66}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!processMouseDown@{processMouseDown}}
+\index{processMouseDown@{processMouseDown}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{processMouseDown()}{processMouseDown()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Edit\+Tool.\+process\+Mouse\+Down (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Initializes action depending on what mouse button was pressed over existing figure left mouse button -\/ movement right mouse button -\/ changes color middle mouse button -\/ rotation 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab5b81e65a8c737ee71642141ea48e114}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a9e389e16321cec672e5f444fed867aed}\label{classpaint_1_1_tools_1_1_edit_tool_a9e389e16321cec672e5f444fed867aed}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!processMouseDragged@{processMouseDragged}}
+\index{processMouseDragged@{processMouseDragged}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{processMouseDragged()}{processMouseDragged()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Edit\+Tool.\+process\+Mouse\+Dragged (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+if left mouse is dragged continues movement, if middle continues rotation 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab159366b71eb7f26fc812a1102b97a35}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a8b5a3d7972fb7ed8b2943ea53131df66}\label{classpaint_1_1_tools_1_1_edit_tool_a8b5a3d7972fb7ed8b2943ea53131df66}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!processMouseUp@{processMouseUp}}
+\index{processMouseUp@{processMouseUp}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{processMouseUp()}{processMouseUp()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Edit\+Tool.\+process\+Mouse\+Up (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+finishes editing action 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_a7768c0dc8c7c7987b06650c649cf9ee3}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_aa6a56e6ef4040354a266fe7c831563d9}\label{classpaint_1_1_tools_1_1_edit_tool_aa6a56e6ef4040354a266fe7c831563d9}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!processMouseWheel@{processMouseWheel}}
+\index{processMouseWheel@{processMouseWheel}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{processMouseWheel()}{processMouseWheel()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Edit\+Tool.\+process\+Mouse\+Wheel (\begin{DoxyParamCaption}\item[{Mouse\+Wheel\+Event}]{e }\end{DoxyParamCaption})}
+
+scales figure over which the mouse was hovering while it was rotated 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_aa191191ea3b629357da405e5d4c71250}{paint.\+Tools.\+Tool}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a4ab2a6e1cd8ef8d76cea1e117d6fb3de}\label{classpaint_1_1_tools_1_1_edit_tool_a4ab2a6e1cd8ef8d76cea1e117d6fb3de}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!command@{command}}
+\index{command@{command}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{command}{command}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_commands_1_1_edit_drawable_command}{Edit\+Drawable\+Command}} paint.\+Tools.\+Edit\+Tool.\+command\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a78be29e64d5934512006d28666690ba6}\label{classpaint_1_1_tools_1_1_edit_tool_a78be29e64d5934512006d28666690ba6}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!drawable@{drawable}}
+\index{drawable@{drawable}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{drawable}{drawable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} paint.\+Tools.\+Edit\+Tool.\+drawable\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a723bf15937bb3cbbbe299c14dd121b64}\label{classpaint_1_1_tools_1_1_edit_tool_a723bf15937bb3cbbbe299c14dd121b64}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!mouseButton@{mouseButton}}
+\index{mouseButton@{mouseButton}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{mouseButton}{mouseButton}}
+{\footnotesize\ttfamily int paint.\+Tools.\+Edit\+Tool.\+mouse\+Button = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a1c7d3945caa3c754420bc1c96536e27b}\label{classpaint_1_1_tools_1_1_edit_tool_a1c7d3945caa3c754420bc1c96536e27b}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!mouseWheelSensitivity@{mouseWheelSensitivity}}
+\index{mouseWheelSensitivity@{mouseWheelSensitivity}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{mouseWheelSensitivity}{mouseWheelSensitivity}}
+{\footnotesize\ttfamily final double paint.\+Tools.\+Edit\+Tool.\+mouse\+Wheel\+Sensitivity = .\+1d\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a0af828aa48ba8b1a91c7f0e1d24c0540}\label{classpaint_1_1_tools_1_1_edit_tool_a0af828aa48ba8b1a91c7f0e1d24c0540}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!paintingWindow@{paintingWindow}}
+\index{paintingWindow@{paintingWindow}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{paintingWindow}{paintingWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} paint.\+Tools.\+Edit\+Tool.\+painting\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_ac8aab9996b6a14565ab3ae87450a29d5}\label{classpaint_1_1_tools_1_1_edit_tool_ac8aab9996b6a14565ab3ae87450a29d5}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!rotation@{rotation}}
+\index{rotation@{rotation}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily double paint.\+Tools.\+Edit\+Tool.\+rotation = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a492939726993078132b5f208204ae398}\label{classpaint_1_1_tools_1_1_edit_tool_a492939726993078132b5f208204ae398}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!rotationOrigin@{rotationOrigin}}
+\index{rotationOrigin@{rotationOrigin}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{rotationOrigin}{rotationOrigin}}
+{\footnotesize\ttfamily Point2D paint.\+Tools.\+Edit\+Tool.\+rotation\+Origin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a07b3e1848b479464ddcb77019f202a76}\label{classpaint_1_1_tools_1_1_edit_tool_a07b3e1848b479464ddcb77019f202a76}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!x@{x}}
+\index{x@{x}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int paint.\+Tools.\+Edit\+Tool.\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_edit_tool_a664cb5ad8475c30079d883a37d6f0331}\label{classpaint_1_1_tools_1_1_edit_tool_a664cb5ad8475c30079d883a37d6f0331}} 
+\index{paint.Tools.EditTool@{paint.Tools.EditTool}!y@{y}}
+\index{y@{y}!paint.Tools.EditTool@{paint.Tools.EditTool}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int paint.\+Tools.\+Edit\+Tool.\+y\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Tools/\mbox{\hyperlink{_edit_tool_8java}{Edit\+Tool.\+java}}\end{DoxyCompactItemize}

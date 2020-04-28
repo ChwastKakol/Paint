@@ -1,0 +1,179 @@
+\hypertarget{classpaint_1_1_painting_window}{}\doxysection{paint.\+Painting\+Window Class Reference}
+\label{classpaint_1_1_painting_window}\index{paint.PaintingWindow@{paint.PaintingWindow}}
+Inheritance diagram for paint.\+Painting\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpaint_1_1_painting_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_painting_window_aa72c34c7beeea4af98e343bc1711a4f2}{Painting\+Window}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_painting_window_a76b7e633e2eb44bb0686985d486c13cb}{redraw}} ()
+\item 
+int \mbox{\hyperlink{classpaint_1_1_painting_window_a3f2b61c0260440585abc93af53ceb92f}{add\+Drawable}} (\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} drawable)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_painting_window_af3f835396e41714d5b0bf61c6b4e7749}{set\+Drawable}} (int index, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} drawable)
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} \mbox{\hyperlink{classpaint_1_1_painting_window_aecf6b3caa75963e316a7f26c125e4a1e}{get\+Collided\+Drawable}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_painting_window_a41df8bc92e6188cd2409d42a768395c0}{reset\+Canvas}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} $>$ \mbox{\hyperlink{classpaint_1_1_painting_window_a75e7fbbf22d46f3cca775eb745b024ca}{get\+Drawables}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_painting_window_ad2e679ab441b89ad590f469976ee44ef}{set\+Drawables}} (Array\+List$<$ \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} $>$ \mbox{\hyperlink{classpaint_1_1_painting_window_acac8ffccb1072ed739850f34dc44f8a7}{drawables}})
+\item 
+int \mbox{\hyperlink{classpaint_1_1_painting_window_abf7eba5a675db18dc268e133bce4f906}{get\+Index\+By\+ID}} (Long ID)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpaint_1_1_painting_window_aa01e5564789cf69958b056492863cd69}{paint\+Component}} (Graphics g)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpaint_1_1_painting_window_a11042c355335c551adba5840fc0a3e29}{draw}} (Graphics graphics)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Array\+List$<$ \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} $>$ \mbox{\hyperlink{classpaint_1_1_painting_window_acac8ffccb1072ed739850f34dc44f8a7}{drawables}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Window in which \mbox{\hyperlink{namespacepaint_1_1_drawables}{Drawables}} may be drawn 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_aa72c34c7beeea4af98e343bc1711a4f2}\label{classpaint_1_1_painting_window_aa72c34c7beeea4af98e343bc1711a4f2}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!PaintingWindow@{PaintingWindow}}
+\index{PaintingWindow@{PaintingWindow}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{PaintingWindow()}{PaintingWindow()}}
+{\footnotesize\ttfamily paint.\+Painting\+Window.\+Painting\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_a3f2b61c0260440585abc93af53ceb92f}\label{classpaint_1_1_painting_window_a3f2b61c0260440585abc93af53ceb92f}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!addDrawable@{addDrawable}}
+\index{addDrawable@{addDrawable}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{addDrawable()}{addDrawable()}}
+{\footnotesize\ttfamily int paint.\+Painting\+Window.\+add\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}}}]{drawable }\end{DoxyParamCaption})}
+
+Adds drawable to list of drawables 
+\begin{DoxyParams}{Parameters}
+{\em drawable} & object to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of the newly added drawable in the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_a11042c355335c551adba5840fc0a3e29}\label{classpaint_1_1_painting_window_a11042c355335c551adba5840fc0a3e29}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!draw@{draw}}
+\index{draw@{draw}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void paint.\+Painting\+Window.\+draw (\begin{DoxyParamCaption}\item[{Graphics}]{graphics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method describing how the panel is drawn 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & graphics to draw to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_aecf6b3caa75963e316a7f26c125e4a1e}\label{classpaint_1_1_painting_window_aecf6b3caa75963e316a7f26c125e4a1e}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!getCollidedDrawable@{getCollidedDrawable}}
+\index{getCollidedDrawable@{getCollidedDrawable}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{getCollidedDrawable()}{getCollidedDrawable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} paint.\+Painting\+Window.\+get\+Collided\+Drawable (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Gets the topmost drawable object containing specified point or null if no such object exists 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of the point \\
+\hline
+{\em y} & y coordinate of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of the quarry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_a75e7fbbf22d46f3cca775eb745b024ca}\label{classpaint_1_1_painting_window_a75e7fbbf22d46f3cca775eb745b024ca}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!getDrawables@{getDrawables}}
+\index{getDrawables@{getDrawables}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{getDrawables()}{getDrawables()}}
+{\footnotesize\ttfamily Array\+List$<$\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}}$>$ paint.\+Painting\+Window.\+get\+Drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the list of all drawables \begin{DoxyReturn}{Returns}
+list of all drawables 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_abf7eba5a675db18dc268e133bce4f906}\label{classpaint_1_1_painting_window_abf7eba5a675db18dc268e133bce4f906}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!getIndexByID@{getIndexByID}}
+\index{getIndexByID@{getIndexByID}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{getIndexByID()}{getIndexByID()}}
+{\footnotesize\ttfamily int paint.\+Painting\+Window.\+get\+Index\+By\+ID (\begin{DoxyParamCaption}\item[{Long}]{ID }\end{DoxyParamCaption})}
+
+return index of the object with specified ID or -\/1 if no such object exists 
+\begin{DoxyParams}{Parameters}
+{\em ID} & to quarry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result of the quarry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_aa01e5564789cf69958b056492863cd69}\label{classpaint_1_1_painting_window_aa01e5564789cf69958b056492863cd69}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily void paint.\+Painting\+Window.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpaint_1_1_painting_window_a76b7e633e2eb44bb0686985d486c13cb}\label{classpaint_1_1_painting_window_a76b7e633e2eb44bb0686985d486c13cb}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!redraw@{redraw}}
+\index{redraw@{redraw}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{redraw()}{redraw()}}
+{\footnotesize\ttfamily void paint.\+Painting\+Window.\+redraw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method for redrawing the content of the panel \mbox{\Hypertarget{classpaint_1_1_painting_window_a41df8bc92e6188cd2409d42a768395c0}\label{classpaint_1_1_painting_window_a41df8bc92e6188cd2409d42a768395c0}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!resetCanvas@{resetCanvas}}
+\index{resetCanvas@{resetCanvas}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{resetCanvas()}{resetCanvas()}}
+{\footnotesize\ttfamily void paint.\+Painting\+Window.\+reset\+Canvas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets the content of the panel \mbox{\Hypertarget{classpaint_1_1_painting_window_af3f835396e41714d5b0bf61c6b4e7749}\label{classpaint_1_1_painting_window_af3f835396e41714d5b0bf61c6b4e7749}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!setDrawable@{setDrawable}}
+\index{setDrawable@{setDrawable}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{setDrawable()}{setDrawable()}}
+{\footnotesize\ttfamily void paint.\+Painting\+Window.\+set\+Drawable (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}}}]{drawable }\end{DoxyParamCaption})}
+
+Sets specified drawable object 
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the object to set \\
+\hline
+{\em drawable} & object to set the drawable to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_ad2e679ab441b89ad590f469976ee44ef}\label{classpaint_1_1_painting_window_ad2e679ab441b89ad590f469976ee44ef}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!setDrawables@{setDrawables}}
+\index{setDrawables@{setDrawables}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{setDrawables()}{setDrawables()}}
+{\footnotesize\ttfamily void paint.\+Painting\+Window.\+set\+Drawables (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} $>$}]{drawables }\end{DoxyParamCaption})}
+
+Sets the drawables list to specified one 
+\begin{DoxyParams}{Parameters}
+{\em drawables} & drawables list to set \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_painting_window_acac8ffccb1072ed739850f34dc44f8a7}\label{classpaint_1_1_painting_window_acac8ffccb1072ed739850f34dc44f8a7}} 
+\index{paint.PaintingWindow@{paint.PaintingWindow}!drawables@{drawables}}
+\index{drawables@{drawables}!paint.PaintingWindow@{paint.PaintingWindow}}
+\doxysubsubsection{\texorpdfstring{drawables}{drawables}}
+{\footnotesize\ttfamily Array\+List$<$\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}}$>$ paint.\+Painting\+Window.\+drawables\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\mbox{\hyperlink{_painting_window_8java}{Painting\+Window.\+java}}\end{DoxyCompactItemize}

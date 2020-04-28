@@ -1,0 +1,68 @@
+\hypertarget{classpaint_1_1_commands_1_1_command}{}\doxysection{paint.\+Commands.\+Command Class Reference}
+\label{classpaint_1_1_commands_1_1_command}\index{paint.Commands.Command@{paint.Commands.Command}}
+Inheritance diagram for paint.\+Commands.\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.430396cm]{classpaint_1_1_commands_1_1_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{classpaint_1_1_commands_1_1_command_ac08b86c031185643f58e86ac41eaecaa}{execute}} ()
+\item 
+abstract void \mbox{\hyperlink{classpaint_1_1_commands_1_1_command_aacd7d4493bc1542cab4448a5b83ce8da}{un\+Execute}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} \mbox{\hyperlink{classpaint_1_1_commands_1_1_command_a7e5db456bab90423c002aa95168eb133}{drawable}}
+\item 
+\mbox{\hyperlink{classpaint_1_1_commands_1_1_memento}{Memento}} \mbox{\hyperlink{classpaint_1_1_commands_1_1_command_a7bd827c64d117f7a3186cdc9152d137a}{memento}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class wrapping actions in {\ttfamily \mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}}} to provide undo, redo functionality 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_commands_1_1_command_ac08b86c031185643f58e86ac41eaecaa}\label{classpaint_1_1_commands_1_1_command_ac08b86c031185643f58e86ac41eaecaa}} 
+\index{paint.Commands.Command@{paint.Commands.Command}!execute@{execute}}
+\index{execute@{execute}!paint.Commands.Command@{paint.Commands.Command}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily abstract void paint.\+Commands.\+Command.\+execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+executes the command (for redo) 
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_commands_1_1_edit_drawable_command_af1233c651d07c2cff1d5ab659afb8717}{paint.\+Commands.\+Edit\+Drawable\+Command}}, \mbox{\hyperlink{classpaint_1_1_commands_1_1_delete_drawable_command_ae262e364a478c452cfe39e5688329508}{paint.\+Commands.\+Delete\+Drawable\+Command}}, and \mbox{\hyperlink{classpaint_1_1_commands_1_1_add_drawable_command_afde04bf3aa0f6141d471ff0dc1cddd1c}{paint.\+Commands.\+Add\+Drawable\+Command}}.
+
+\mbox{\Hypertarget{classpaint_1_1_commands_1_1_command_aacd7d4493bc1542cab4448a5b83ce8da}\label{classpaint_1_1_commands_1_1_command_aacd7d4493bc1542cab4448a5b83ce8da}} 
+\index{paint.Commands.Command@{paint.Commands.Command}!unExecute@{unExecute}}
+\index{unExecute@{unExecute}!paint.Commands.Command@{paint.Commands.Command}}
+\doxysubsubsection{\texorpdfstring{unExecute()}{unExecute()}}
+{\footnotesize\ttfamily abstract void paint.\+Commands.\+Command.\+un\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+cancels execution of the command (for undo) 
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_commands_1_1_edit_drawable_command_af57793218d0081a9c572827d320def16}{paint.\+Commands.\+Edit\+Drawable\+Command}}, \mbox{\hyperlink{classpaint_1_1_commands_1_1_delete_drawable_command_aa6eb453cf8549e19f6d0464576bc544e}{paint.\+Commands.\+Delete\+Drawable\+Command}}, and \mbox{\hyperlink{classpaint_1_1_commands_1_1_add_drawable_command_aa7821f445877847c7d4b79a61adbd88f}{paint.\+Commands.\+Add\+Drawable\+Command}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_commands_1_1_command_a7e5db456bab90423c002aa95168eb133}\label{classpaint_1_1_commands_1_1_command_a7e5db456bab90423c002aa95168eb133}} 
+\index{paint.Commands.Command@{paint.Commands.Command}!drawable@{drawable}}
+\index{drawable@{drawable}!paint.Commands.Command@{paint.Commands.Command}}
+\doxysubsubsection{\texorpdfstring{drawable}{drawable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} paint.\+Commands.\+Command.\+drawable\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classpaint_1_1_commands_1_1_command_a7bd827c64d117f7a3186cdc9152d137a}\label{classpaint_1_1_commands_1_1_command_a7bd827c64d117f7a3186cdc9152d137a}} 
+\index{paint.Commands.Command@{paint.Commands.Command}!memento@{memento}}
+\index{memento@{memento}!paint.Commands.Command@{paint.Commands.Command}}
+\doxysubsubsection{\texorpdfstring{memento}{memento}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_commands_1_1_memento}{Memento}} paint.\+Commands.\+Command.\+memento\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Commands/\mbox{\hyperlink{_command_8java}{Command.\+java}}\end{DoxyCompactItemize}

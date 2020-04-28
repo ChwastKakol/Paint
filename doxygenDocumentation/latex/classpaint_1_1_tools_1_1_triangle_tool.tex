@@ -1,0 +1,114 @@
+\hypertarget{classpaint_1_1_tools_1_1_triangle_tool}{}\doxysection{paint.\+Tools.\+Triangle\+Tool Class Reference}
+\label{classpaint_1_1_tools_1_1_triangle_tool}\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+Inheritance diagram for paint.\+Tools.\+Triangle\+Tool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpaint_1_1_tools_1_1_triangle_tool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_ab150c2f9330fce8bc1a53ec00f2bfc8f}{Triangle\+Tool}} (\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_a3a6b7f6c6646578b380c1222655bdaf1}{painting\+Window}}, Color \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}{color}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_aa61ce4ef334d787f4d48474bea4efdd6}{process\+Mouse\+Down}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_a3ab82594ae768300ad1351eb42d36abc}{process\+Mouse\+Dragged}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_a59b5a3bee2b2bffe746593c5d962b179}{process\+Mouse\+Up}} (Mouse\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_a3a6b7f6c6646578b380c1222655bdaf1}{painting\+Window}}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle}{Drawable\+Triangle}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_ab75c696a7ee021849d5d72b80f07f74a}{drawable\+Triangle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classpaint_1_1_tools_1_1_tool}{Tool}} allowing to create a drawable triangle 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_triangle_tool_ab150c2f9330fce8bc1a53ec00f2bfc8f}\label{classpaint_1_1_tools_1_1_triangle_tool_ab150c2f9330fce8bc1a53ec00f2bfc8f}} 
+\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}!TriangleTool@{TriangleTool}}
+\index{TriangleTool@{TriangleTool}!paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+\doxysubsubsection{\texorpdfstring{TriangleTool()}{TriangleTool()}}
+{\footnotesize\ttfamily paint.\+Tools.\+Triangle\+Tool.\+Triangle\+Tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}}}]{painting\+Window,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em painting\+Window} & painting window in which the triangle is to be created \\
+\hline
+{\em color} & the color in which the triangle will be created \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_triangle_tool_aa61ce4ef334d787f4d48474bea4efdd6}\label{classpaint_1_1_tools_1_1_triangle_tool_aa61ce4ef334d787f4d48474bea4efdd6}} 
+\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}!processMouseDown@{processMouseDown}}
+\index{processMouseDown@{processMouseDown}!paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+\doxysubsubsection{\texorpdfstring{processMouseDown()}{processMouseDown()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Triangle\+Tool.\+process\+Mouse\+Down (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+If Left mouse button was pressed creates triangle with origin in specified location 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab5b81e65a8c737ee71642141ea48e114}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_triangle_tool_a3ab82594ae768300ad1351eb42d36abc}\label{classpaint_1_1_tools_1_1_triangle_tool_a3ab82594ae768300ad1351eb42d36abc}} 
+\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}!processMouseDragged@{processMouseDragged}}
+\index{processMouseDragged@{processMouseDragged}!paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+\doxysubsubsection{\texorpdfstring{processMouseDragged()}{processMouseDragged()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Triangle\+Tool.\+process\+Mouse\+Dragged (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Drags the second point of the triangle to specified location 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab159366b71eb7f26fc812a1102b97a35}{paint.\+Tools.\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_triangle_tool_a59b5a3bee2b2bffe746593c5d962b179}\label{classpaint_1_1_tools_1_1_triangle_tool_a59b5a3bee2b2bffe746593c5d962b179}} 
+\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}!processMouseUp@{processMouseUp}}
+\index{processMouseUp@{processMouseUp}!paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+\doxysubsubsection{\texorpdfstring{processMouseUp()}{processMouseUp()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Triangle\+Tool.\+process\+Mouse\+Up (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Finishes creation of triangle 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event to be processed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_a7768c0dc8c7c7987b06650c649cf9ee3}{paint.\+Tools.\+Tool}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_triangle_tool_ab75c696a7ee021849d5d72b80f07f74a}\label{classpaint_1_1_tools_1_1_triangle_tool_ab75c696a7ee021849d5d72b80f07f74a}} 
+\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}!drawableTriangle@{drawableTriangle}}
+\index{drawableTriangle@{drawableTriangle}!paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+\doxysubsubsection{\texorpdfstring{drawableTriangle}{drawableTriangle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle}{Drawable\+Triangle}} paint.\+Tools.\+Triangle\+Tool.\+drawable\+Triangle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_triangle_tool_a3a6b7f6c6646578b380c1222655bdaf1}\label{classpaint_1_1_tools_1_1_triangle_tool_a3a6b7f6c6646578b380c1222655bdaf1}} 
+\index{paint.Tools.TriangleTool@{paint.Tools.TriangleTool}!paintingWindow@{paintingWindow}}
+\index{paintingWindow@{paintingWindow}!paint.Tools.TriangleTool@{paint.Tools.TriangleTool}}
+\doxysubsubsection{\texorpdfstring{paintingWindow}{paintingWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}} paint.\+Tools.\+Triangle\+Tool.\+painting\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Tools/\mbox{\hyperlink{_triangle_tool_8java}{Triangle\+Tool.\+java}}\end{DoxyCompactItemize}

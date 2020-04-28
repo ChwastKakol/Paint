@@ -1,0 +1,132 @@
+\hypertarget{classpaint_1_1_tools_1_1_tool}{}\doxysection{paint.\+Tools.\+Tool Class Reference}
+\label{classpaint_1_1_tools_1_1_tool}\index{paint.Tools.Tool@{paint.Tools.Tool}}
+Inheritance diagram for paint.\+Tools.\+Tool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.131313cm]{classpaint_1_1_tools_1_1_tool}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_aad77c5b4502c1956a3093b831b20e0c1}{set\+Color}} (Color \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}{color}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab5b81e65a8c737ee71642141ea48e114}{process\+Mouse\+Down}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_a7768c0dc8c7c7987b06650c649cf9ee3}{process\+Mouse\+Up}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_ab159366b71eb7f26fc812a1102b97a35}{process\+Mouse\+Dragged}} (Mouse\+Event e)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_aa191191ea3b629357da405e5d4c71250}{process\+Mouse\+Wheel}} (Mouse\+Wheel\+Event e)
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_aa7063a052f8671d1bca516e96ed0bfd5}{get\+Selected}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Color \mbox{\hyperlink{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}{color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class providing currently active tool access to mouse events 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_aa7063a052f8671d1bca516e96ed0bfd5}\label{classpaint_1_1_tools_1_1_tool_aa7063a052f8671d1bca516e96ed0bfd5}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!getSelected@{getSelected}}
+\index{getSelected@{getSelected}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{getSelected()}{getSelected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} paint.\+Tools.\+Tool.\+get\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the object selected by the tool \begin{DoxyReturn}{Returns}
+selected object 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_adec20912c2f14b0911368192c76ea38e}{paint.\+Tools.\+Edit\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_ab5b81e65a8c737ee71642141ea48e114}\label{classpaint_1_1_tools_1_1_tool_ab5b81e65a8c737ee71642141ea48e114}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!processMouseDown@{processMouseDown}}
+\index{processMouseDown@{processMouseDown}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{processMouseDown()}{processMouseDown()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Tool.\+process\+Mouse\+Down (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Processes the Mouse\+Button\+Down\+Event 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_acd04b961d4475350b15d88b403f7ef66}{paint.\+Tools.\+Edit\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a8802e857f77ea962828d696777f682a2}{paint.\+Tools.\+Ellipse\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_line_tool_a4311c66a4d283cf22fcdf1c235cbd08f}{paint.\+Tools.\+Line\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_rectangle_tool_a5b80de62a3f83b024ede9c39346e40cc}{paint.\+Tools.\+Rectangle\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_aa61ce4ef334d787f4d48474bea4efdd6}{paint.\+Tools.\+Triangle\+Tool}}, and \mbox{\hyperlink{classpaint_1_1_tools_1_1_point_tool_aa7a1ccd343880bcdf589f5a74f8f63bb}{paint.\+Tools.\+Point\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_ab159366b71eb7f26fc812a1102b97a35}\label{classpaint_1_1_tools_1_1_tool_ab159366b71eb7f26fc812a1102b97a35}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!processMouseDragged@{processMouseDragged}}
+\index{processMouseDragged@{processMouseDragged}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{processMouseDragged()}{processMouseDragged()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Tool.\+process\+Mouse\+Dragged (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Processes the Mouse\+Dragged\+Event 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a9e389e16321cec672e5f444fed867aed}{paint.\+Tools.\+Edit\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_a6bec3d13c8da86f1e83e6869069736aa}{paint.\+Tools.\+Ellipse\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_line_tool_ae3e6975c9ebdfb0a422137cd73ca5fe6}{paint.\+Tools.\+Line\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_rectangle_tool_ae45bad7ccc936a3bb20235a910ceae03}{paint.\+Tools.\+Rectangle\+Tool}}, and \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_a3ab82594ae768300ad1351eb42d36abc}{paint.\+Tools.\+Triangle\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_a7768c0dc8c7c7987b06650c649cf9ee3}\label{classpaint_1_1_tools_1_1_tool_a7768c0dc8c7c7987b06650c649cf9ee3}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!processMouseUp@{processMouseUp}}
+\index{processMouseUp@{processMouseUp}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{processMouseUp()}{processMouseUp()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Tool.\+process\+Mouse\+Up (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e }\end{DoxyParamCaption})}
+
+Processes the Mouse\+Button\+Up\+Event 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_a8b5a3d7972fb7ed8b2943ea53131df66}{paint.\+Tools.\+Edit\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_ellipse_tool_aeeb6069d6c22deb8be5c1805230591d4}{paint.\+Tools.\+Ellipse\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_line_tool_ae78db1789fc002eead2f24b9bcc427a1}{paint.\+Tools.\+Line\+Tool}}, \mbox{\hyperlink{classpaint_1_1_tools_1_1_rectangle_tool_aeb09f3069613b9207e706695e6b22b90}{paint.\+Tools.\+Rectangle\+Tool}}, and \mbox{\hyperlink{classpaint_1_1_tools_1_1_triangle_tool_a59b5a3bee2b2bffe746593c5d962b179}{paint.\+Tools.\+Triangle\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_aa191191ea3b629357da405e5d4c71250}\label{classpaint_1_1_tools_1_1_tool_aa191191ea3b629357da405e5d4c71250}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!processMouseWheel@{processMouseWheel}}
+\index{processMouseWheel@{processMouseWheel}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{processMouseWheel()}{processMouseWheel()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Tool.\+process\+Mouse\+Wheel (\begin{DoxyParamCaption}\item[{Mouse\+Wheel\+Event}]{e }\end{DoxyParamCaption})}
+
+Processes the Mouse\+Wheel\+Event 
+\begin{DoxyParams}{Parameters}
+{\em e} & mouse\+Event \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_tools_1_1_edit_tool_aa6a56e6ef4040354a266fe7c831563d9}{paint.\+Tools.\+Edit\+Tool}}.
+
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_aad77c5b4502c1956a3093b831b20e0c1}\label{classpaint_1_1_tools_1_1_tool_aad77c5b4502c1956a3093b831b20e0c1}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!setColor@{setColor}}
+\index{setColor@{setColor}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void paint.\+Tools.\+Tool.\+set\+Color (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Sets the primary color of the tool 
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}\label{classpaint_1_1_tools_1_1_tool_afc763e762bfc25e276f07dc17e33240f}} 
+\index{paint.Tools.Tool@{paint.Tools.Tool}!color@{color}}
+\index{color@{color}!paint.Tools.Tool@{paint.Tools.Tool}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily Color paint.\+Tools.\+Tool.\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Tools/\mbox{\hyperlink{_tool_8java}{Tool.\+java}}\end{DoxyCompactItemize}

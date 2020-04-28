@@ -1,0 +1,150 @@
+\hypertarget{classpaint_1_1_drawables_1_1_drawable_line}{}\doxysection{paint.\+Drawables.\+Drawable\+Line Class Reference}
+\label{classpaint_1_1_drawables_1_1_drawable_line}\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+Inheritance diagram for paint.\+Drawables.\+Drawable\+Line\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpaint_1_1_drawables_1_1_drawable_line}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a38927ba105193884ecdf01871c3b17a2}{Drawable\+Line}} (int x1, int y1, int x2, int y2, Color \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a82a56f10a2511a72b88957a06ce79d44}{color}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a6bd014884ca9a828d392d396251ed368}{draw}} (Graphics2D graphics2D)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a1e8385e7f91f085fc60e456854415d2d}{set\+Second\+Point}} (int x, int y)
+\item 
+boolean \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a9888caff2e50d66757cfb2aca64f131c}{contains}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a6059fd9a968ebbb3a01210b3819520db}{set\+Finished}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a48e7a24fa16ecc6eeaf3060cac32f71c}{update\+Shape}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Line2D \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a6f68085bc25082bbeb6ae71e83aa3735}{line2D}}
+\item 
+boolean \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a408ee4ab803d3045bf6ef1d3bf91cab0}{is\+Finished}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} Line Class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a38927ba105193884ecdf01871c3b17a2}\label{classpaint_1_1_drawables_1_1_drawable_line_a38927ba105193884ecdf01871c3b17a2}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!DrawableLine@{DrawableLine}}
+\index{DrawableLine@{DrawableLine}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{DrawableLine()}{DrawableLine()}}
+{\footnotesize\ttfamily paint.\+Drawables.\+Drawable\+Line.\+Drawable\+Line (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em x1} & x coordinate of origin point \\
+\hline
+{\em y1} & y coordinate of origin point \\
+\hline
+{\em x2} & x coordinate of second point \\
+\hline
+{\em y2} & y coordinate of second point \\
+\hline
+{\em color} & color of the line \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a9888caff2e50d66757cfb2aca64f131c}\label{classpaint_1_1_drawables_1_1_drawable_line_a9888caff2e50d66757cfb2aca64f131c}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!contains@{contains}}
+\index{contains@{contains}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily boolean paint.\+Drawables.\+Drawable\+Line.\+contains (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Method checking if drawable object contains point (x, y)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of the point \\
+\hline
+{\em y} & y coordinate of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if object contains point (x,y) false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a02c973faf35885800a4a02c63ca1e7ae}{paint.\+Drawables.\+Drawable}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a6bd014884ca9a828d392d396251ed368}\label{classpaint_1_1_drawables_1_1_drawable_line_a6bd014884ca9a828d392d396251ed368}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!draw@{draw}}
+\index{draw@{draw}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Line.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{graphics2D }\end{DoxyParamCaption})}
+
+Abstract method describing how a drawable object is drawn
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics2D} & graphics to be drawn to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a0498a28076d61dc79881446c474bce30}{paint.\+Drawables.\+Drawable}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a6059fd9a968ebbb3a01210b3819520db}\label{classpaint_1_1_drawables_1_1_drawable_line_a6059fd9a968ebbb3a01210b3819520db}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!setFinished@{setFinished}}
+\index{setFinished@{setFinished}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{setFinished()}{setFinished()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Line.\+set\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Declares figure to be complete, ie not editable by {\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a1e8385e7f91f085fc60e456854415d2d}{set\+Second\+Point()}}} \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a1e8385e7f91f085fc60e456854415d2d}\label{classpaint_1_1_drawables_1_1_drawable_line_a1e8385e7f91f085fc60e456854415d2d}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!setSecondPoint@{setSecondPoint}}
+\index{setSecondPoint@{setSecondPoint}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{setSecondPoint()}{setSecondPoint()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Line.\+set\+Second\+Point (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+sets the position of the second point defining the line (non orign) 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of second point \\
+\hline
+{\em y} & y coordinate of second point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a48e7a24fa16ecc6eeaf3060cac32f71c}\label{classpaint_1_1_drawables_1_1_drawable_line_a48e7a24fa16ecc6eeaf3060cac32f71c}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!updateShape@{updateShape}}
+\index{updateShape@{updateShape}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{updateShape()}{updateShape()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Line.\+update\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Updates {\ttfamily shape} with current affine\+Transform 
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a01d5b8b1478c1282a6892feda5c0828d}{paint.\+Drawables.\+Drawable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a408ee4ab803d3045bf6ef1d3bf91cab0}\label{classpaint_1_1_drawables_1_1_drawable_line_a408ee4ab803d3045bf6ef1d3bf91cab0}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{isFinished}{isFinished}}
+{\footnotesize\ttfamily boolean paint.\+Drawables.\+Drawable\+Line.\+is\+Finished = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_line_a6f68085bc25082bbeb6ae71e83aa3735}\label{classpaint_1_1_drawables_1_1_drawable_line_a6f68085bc25082bbeb6ae71e83aa3735}} 
+\index{paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}!line2D@{line2D}}
+\index{line2D@{line2D}!paint.Drawables.DrawableLine@{paint.Drawables.DrawableLine}}
+\doxysubsubsection{\texorpdfstring{line2D}{line2D}}
+{\footnotesize\ttfamily Line2D paint.\+Drawables.\+Drawable\+Line.\+line2D\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Drawables/\mbox{\hyperlink{_drawable_line_8java}{Drawable\+Line.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,193 @@
+\hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle}{}\doxysection{paint.\+Drawables.\+Drawable\+Triangle Class Reference}
+\label{classpaint_1_1_drawables_1_1_drawable_triangle}\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+Inheritance diagram for paint.\+Drawables.\+Drawable\+Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpaint_1_1_drawables_1_1_drawable_triangle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_af7b7dcb6e5d84cc3d07fed6b6d495c9c}{Drawable\+Triangle}} (int x1, int y1, int x2, int y2, Color \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a82a56f10a2511a72b88957a06ce79d44}{color}})
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_a69da1187b7ddecc7f37d5af8d1135128}{draw}} (Graphics2D graphics2D)
+\item 
+boolean \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_af8523e4aac03d73a45787e01481fa32b}{contains}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_aa3b5b776e8a692367a50a913c5037279}{set\+Second\+Point}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_a627400e3442e1ab8b5e47f8bc04dc7dc}{set\+Finished}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Polygon \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_af0fd12475b171ff4dd016f3623fffba8}{create\+Polygon}} (int x1, int y1, int x2, int y2, boolean invert)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_ab22c8d8f3e6b63b8bf71bbddbbaf6489}{update\+Shape}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_a500273d0acd34da75428d66834a62d51}{origY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_a2ffd0ce9ca01954afed0ba71e471be36}{origX}}
+\item 
+Polygon \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_ae46923650f23bfa5c21a75aa6bdaa595}{polygon}}
+\item 
+boolean \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_a27d51aefa4d6415eed525155b84bfce1}{is\+Finished}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} Triangle Class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_af7b7dcb6e5d84cc3d07fed6b6d495c9c}\label{classpaint_1_1_drawables_1_1_drawable_triangle_af7b7dcb6e5d84cc3d07fed6b6d495c9c}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!DrawableTriangle@{DrawableTriangle}}
+\index{DrawableTriangle@{DrawableTriangle}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{DrawableTriangle()}{DrawableTriangle()}}
+{\footnotesize\ttfamily paint.\+Drawables.\+Drawable\+Triangle.\+Drawable\+Triangle (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em x1} & x coordinate of south-\/west bounding rectangle corner, origin x \\
+\hline
+{\em y1} & y coordinate of south-\/west bounding rectangle corner, origin y \\
+\hline
+{\em x2} & x coordinate of north-\/east bounding rectangle corner \\
+\hline
+{\em y2} & y coordinate of north-\/east bounding rectangle corner \\
+\hline
+{\em color} & color of the triangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_af8523e4aac03d73a45787e01481fa32b}\label{classpaint_1_1_drawables_1_1_drawable_triangle_af8523e4aac03d73a45787e01481fa32b}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!contains@{contains}}
+\index{contains@{contains}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily boolean paint.\+Drawables.\+Drawable\+Triangle.\+contains (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Method checking if drawable object contains point (x, y)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of the point \\
+\hline
+{\em y} & y coordinate of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if object contains point (x,y) false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a02c973faf35885800a4a02c63ca1e7ae}{paint.\+Drawables.\+Drawable}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_af0fd12475b171ff4dd016f3623fffba8}\label{classpaint_1_1_drawables_1_1_drawable_triangle_af0fd12475b171ff4dd016f3623fffba8}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!createPolygon@{createPolygon}}
+\index{createPolygon@{createPolygon}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{createPolygon()}{createPolygon()}}
+{\footnotesize\ttfamily Polygon paint.\+Drawables.\+Drawable\+Triangle.\+create\+Polygon (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{boolean}]{invert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates triangle fitting defined rectangle 
+\begin{DoxyParams}{Parameters}
+{\em x1} & x coordinate of south-\/west bounding rectangle corner \\
+\hline
+{\em y1} & y coordinate of south-\/west bounding rectangle corner \\
+\hline
+{\em x2} & x coordinate of north-\/east bounding rectangle corner \\
+\hline
+{\em y2} & y coordinate of north-\/east bounding rectangle corner \\
+\hline
+{\em invert} & specifies whether or not the triangle is flipped vertically \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_a69da1187b7ddecc7f37d5af8d1135128}\label{classpaint_1_1_drawables_1_1_drawable_triangle_a69da1187b7ddecc7f37d5af8d1135128}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!draw@{draw}}
+\index{draw@{draw}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Triangle.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{graphics2D }\end{DoxyParamCaption})}
+
+Abstract method describing how a drawable object is drawn
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics2D} & graphics to be drawn to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a0498a28076d61dc79881446c474bce30}{paint.\+Drawables.\+Drawable}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_a627400e3442e1ab8b5e47f8bc04dc7dc}\label{classpaint_1_1_drawables_1_1_drawable_triangle_a627400e3442e1ab8b5e47f8bc04dc7dc}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!setFinished@{setFinished}}
+\index{setFinished@{setFinished}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{setFinished()}{setFinished()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Triangle.\+set\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Declares figure to be complete, ie not editable by {\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_aa3b5b776e8a692367a50a913c5037279}{set\+Second\+Point()}}} \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_aa3b5b776e8a692367a50a913c5037279}\label{classpaint_1_1_drawables_1_1_drawable_triangle_aa3b5b776e8a692367a50a913c5037279}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!setSecondPoint@{setSecondPoint}}
+\index{setSecondPoint@{setSecondPoint}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{setSecondPoint()}{setSecondPoint()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Triangle.\+set\+Second\+Point (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+sets the position of the second point defining the triangle (non orign) 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of second bounding rectangle corner \\
+\hline
+{\em y} & y coordinate of second bounding rectangle corner \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_ab22c8d8f3e6b63b8bf71bbddbbaf6489}\label{classpaint_1_1_drawables_1_1_drawable_triangle_ab22c8d8f3e6b63b8bf71bbddbbaf6489}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!updateShape@{updateShape}}
+\index{updateShape@{updateShape}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{updateShape()}{updateShape()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable\+Triangle.\+update\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Updates {\ttfamily shape} with current affine\+Transform 
+
+Reimplemented from \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a01d5b8b1478c1282a6892feda5c0828d}{paint.\+Drawables.\+Drawable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_a27d51aefa4d6415eed525155b84bfce1}\label{classpaint_1_1_drawables_1_1_drawable_triangle_a27d51aefa4d6415eed525155b84bfce1}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{isFinished}{isFinished}}
+{\footnotesize\ttfamily boolean paint.\+Drawables.\+Drawable\+Triangle.\+is\+Finished = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_a2ffd0ce9ca01954afed0ba71e471be36}\label{classpaint_1_1_drawables_1_1_drawable_triangle_a2ffd0ce9ca01954afed0ba71e471be36}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!origX@{origX}}
+\index{origX@{origX}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{origX}{origX}}
+{\footnotesize\ttfamily final int paint.\+Drawables.\+Drawable\+Triangle.\+origX\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_a500273d0acd34da75428d66834a62d51}\label{classpaint_1_1_drawables_1_1_drawable_triangle_a500273d0acd34da75428d66834a62d51}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!origY@{origY}}
+\index{origY@{origY}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{origY}{origY}}
+{\footnotesize\ttfamily final int paint.\+Drawables.\+Drawable\+Triangle.\+origY\hspace{0.3cm}{\ttfamily [package]}}
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_triangle_ae46923650f23bfa5c21a75aa6bdaa595}\label{classpaint_1_1_drawables_1_1_drawable_triangle_ae46923650f23bfa5c21a75aa6bdaa595}} 
+\index{paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}!polygon@{polygon}}
+\index{polygon@{polygon}!paint.Drawables.DrawableTriangle@{paint.Drawables.DrawableTriangle}}
+\doxysubsubsection{\texorpdfstring{polygon}{polygon}}
+{\footnotesize\ttfamily Polygon paint.\+Drawables.\+Drawable\+Triangle.\+polygon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Drawables/\mbox{\hyperlink{_drawable_triangle_8java}{Drawable\+Triangle.\+java}}\end{DoxyCompactItemize}

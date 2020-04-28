@@ -1,0 +1,300 @@
+\hypertarget{classpaint_1_1_drawables_1_1_drawable}{}\doxysection{paint.\+Drawables.\+Drawable Class Reference}
+\label{classpaint_1_1_drawables_1_1_drawable}\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+Inheritance diagram for paint.\+Drawables.\+Drawable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.493333cm]{classpaint_1_1_drawables_1_1_drawable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a0498a28076d61dc79881446c474bce30}{draw}} (Graphics2D graphics2D)
+\item 
+boolean \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a02c973faf35885800a4a02c63ca1e7ae}{contains}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ae2bebed4e936b8380f9b460cd3c30ece}{translate}} (int dx, int dy)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a34a9e3e9e57fa6e5bd553be541974321}{scale}} (double scale)
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a9a5e6d3a8717e6b0a4fe3b852fac7f2f}{set\+Rotation}} (double \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_abbca887361c4f0818649bd5d23362561}{rotation}})
+\item 
+double \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_aa3ff44c119f5bc826e6338379c5fd7df}{get\+Rotation}} ()
+\item 
+Point2D \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ab8aee0f27cdf7cd60e04ed9de2868eb9}{get\+Center}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_af5773a264d962c28681e3475277d1af9}{set\+Color}} (Color \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a82a56f10a2511a72b88957a06ce79d44}{color}})
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a25a0cc44c6d51fbc30bb3b9f25175cf2}{clone}} ()  throws Clone\+Not\+Supported\+Exception
+\item 
+Long \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ac730372e31c6871ababcabaf1c0991e6}{get\+ID}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_aef3fb1fdca74246d94f53073d57b7fff}{set\+ID}} (Long \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a6a6e5e1581980fbc96133a0a251c2d51}{ID}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_aa3ed958097b7aae23e2556dd44762d34}{Drawable}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a61747af42051bb801303ceb895f64a12}{create\+Affine\+Transform}} ()
+\item 
+void \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a01d5b8b1478c1282a6892feda5c0828d}{update\+Shape}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Color \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a82a56f10a2511a72b88957a06ce79d44}{color}}
+\item 
+Affine\+Transform \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_aa8d8a69f316feaf71c3a5a1a832e1cdf}{affine\+Transform}} = null
+\item 
+Shape \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a4fab2a0208b74b3310a8430708eb1af4}{shape}}
+\item 
+Long \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_a6a6e5e1581980fbc96133a0a251c2d51}{ID}}
+\item 
+double \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_abf391d9f9cac69072c0bafeb3bce2aff}{scale}} = 1
+\item 
+double \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_aededbbce7d70aa2b9b98ea5f0ef03795}{translationX}} = 0
+\item 
+double \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_abbca887361c4f0818649bd5d23362561}{rotation}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_aaf929e6fb5e93b093bf6691b5ed80926}{translationY}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract class used to draw figures in {\ttfamily \mbox{\hyperlink{classpaint_1_1_painting_window}{Painting\+Window}}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_aa3ed958097b7aae23e2556dd44762d34}\label{classpaint_1_1_drawables_1_1_drawable_aa3ed958097b7aae23e2556dd44762d34}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!Drawable@{Drawable}}
+\index{Drawable@{Drawable}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{Drawable()}{Drawable()}}
+{\footnotesize\ttfamily paint.\+Drawables.\+Drawable.\+Drawable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a25a0cc44c6d51fbc30bb3b9f25175cf2}\label{classpaint_1_1_drawables_1_1_drawable_a25a0cc44c6d51fbc30bb3b9f25175cf2}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!clone@{clone}}
+\index{clone@{clone}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable}{Drawable}} paint.\+Drawables.\+Drawable.\+clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Clone\+Not\+Supported\+Exception}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ellipse_ac6ac460aceeb259e044002e57a9f186b}{paint.\+Drawables.\+Drawable\+Ellipse}}, and \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_rectangle_a6622b1d86a17a8ee78fc9d2fa889c011}{paint.\+Drawables.\+Drawable\+Rectangle}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a02c973faf35885800a4a02c63ca1e7ae}\label{classpaint_1_1_drawables_1_1_drawable_a02c973faf35885800a4a02c63ca1e7ae}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!contains@{contains}}
+\index{contains@{contains}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily boolean paint.\+Drawables.\+Drawable.\+contains (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Method checking if drawable object contains point (x, y)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of the point \\
+\hline
+{\em y} & y coordinate of the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if object contains point (x,y) false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a9888caff2e50d66757cfb2aca64f131c}{paint.\+Drawables.\+Drawable\+Line}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_rectangle_a2da7d00bb0245a1fd4372ef518b88c9e}{paint.\+Drawables.\+Drawable\+Rectangle}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ellipse_a2322bf26741c951b6528a9740973858b}{paint.\+Drawables.\+Drawable\+Ellipse}}, and \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_af8523e4aac03d73a45787e01481fa32b}{paint.\+Drawables.\+Drawable\+Triangle}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a61747af42051bb801303ceb895f64a12}\label{classpaint_1_1_drawables_1_1_drawable_a61747af42051bb801303ceb895f64a12}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!createAffineTransform@{createAffineTransform}}
+\index{createAffineTransform@{createAffineTransform}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{createAffineTransform()}{createAffineTransform()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+create\+Affine\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates sets {\ttfamily affine\+Transform} to one created from current position, rotation and scale \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a0498a28076d61dc79881446c474bce30}\label{classpaint_1_1_drawables_1_1_drawable_a0498a28076d61dc79881446c474bce30}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!draw@{draw}}
+\index{draw@{draw}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily abstract void paint.\+Drawables.\+Drawable.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{graphics2D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Abstract method describing how a drawable object is drawn
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics2D} & graphics to be drawn to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_rectangle_ab580dbcce06599d1fc2f4f830d555731}{paint.\+Drawables.\+Drawable\+Rectangle}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ellipse_ac2dd0707f3a3bde6b3b433d6f86354ac}{paint.\+Drawables.\+Drawable\+Ellipse}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a6bd014884ca9a828d392d396251ed368}{paint.\+Drawables.\+Drawable\+Line}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_a69da1187b7ddecc7f37d5af8d1135128}{paint.\+Drawables.\+Drawable\+Triangle}}, and \mbox{\hyperlink{classpaint_1_1_drawables_1_1_point_ae149702b97b39c68d80b6f16ad3627d7}{paint.\+Drawables.\+Point}}.
+
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_ab8aee0f27cdf7cd60e04ed9de2868eb9}\label{classpaint_1_1_drawables_1_1_drawable_ab8aee0f27cdf7cd60e04ed9de2868eb9}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily Point2D paint.\+Drawables.\+Drawable.\+get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets center of drawable object
+
+\begin{DoxyReturn}{Returns}
+center of drawable object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_ac730372e31c6871ababcabaf1c0991e6}\label{classpaint_1_1_drawables_1_1_drawable_ac730372e31c6871ababcabaf1c0991e6}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!getID@{getID}}
+\index{getID@{getID}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily Long paint.\+Drawables.\+Drawable.\+get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets object\textquotesingle{}s ID
+
+\begin{DoxyReturn}{Returns}
+object \textquotesingle{}s ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_aa3ff44c119f5bc826e6338379c5fd7df}\label{classpaint_1_1_drawables_1_1_drawable_aa3ff44c119f5bc826e6338379c5fd7df}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily double paint.\+Drawables.\+Drawable.\+get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets Rotation of drawable object
+
+\begin{DoxyReturn}{Returns}
+counter -\/clockwise angle measured from positive X axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a34a9e3e9e57fa6e5bd553be541974321}\label{classpaint_1_1_drawables_1_1_drawable_a34a9e3e9e57fa6e5bd553be541974321}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!scale@{scale}}
+\index{scale@{scale}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+scale (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption})}
+
+Scales drawable object
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & change of scale \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_af5773a264d962c28681e3475277d1af9}\label{classpaint_1_1_drawables_1_1_drawable_af5773a264d962c28681e3475277d1af9}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!setColor@{setColor}}
+\index{setColor@{setColor}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+set\+Color (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+Sets color of drawable object
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & colour of drawable object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_aef3fb1fdca74246d94f53073d57b7fff}\label{classpaint_1_1_drawables_1_1_drawable_aef3fb1fdca74246d94f53073d57b7fff}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!setID@{setID}}
+\index{setID@{setID}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{setID()}{setID()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+set\+ID (\begin{DoxyParamCaption}\item[{Long}]{ID }\end{DoxyParamCaption})}
+
+Sets object\textquotesingle{}s ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & the id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a9a5e6d3a8717e6b0a4fe3b852fac7f2f}\label{classpaint_1_1_drawables_1_1_drawable_a9a5e6d3a8717e6b0a4fe3b852fac7f2f}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+set\+Rotation (\begin{DoxyParamCaption}\item[{double}]{rotation }\end{DoxyParamCaption})}
+
+Sets rotation of drawable object to specified angle
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & counter-\/clockwise angle measured from positive X axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_ae2bebed4e936b8380f9b460cd3c30ece}\label{classpaint_1_1_drawables_1_1_drawable_ae2bebed4e936b8380f9b460cd3c30ece}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!translate@{translate}}
+\index{translate@{translate}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+translate (\begin{DoxyParamCaption}\item[{int}]{dx,  }\item[{int}]{dy }\end{DoxyParamCaption})}
+
+Translates drawable object on the XY plane
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & movement along X axis \\
+\hline
+{\em dy} & movement along Y axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a01d5b8b1478c1282a6892feda5c0828d}\label{classpaint_1_1_drawables_1_1_drawable_a01d5b8b1478c1282a6892feda5c0828d}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!updateShape@{updateShape}}
+\index{updateShape@{updateShape}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{updateShape()}{updateShape()}}
+{\footnotesize\ttfamily void paint.\+Drawables.\+Drawable.\+update\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Updates {\ttfamily shape} with current affine\+Transform 
+
+Reimplemented in \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_triangle_ab22c8d8f3e6b63b8bf71bbddbbaf6489}{paint.\+Drawables.\+Drawable\+Triangle}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_rectangle_a1baa54b8b0e8b8156e78b269417fd086}{paint.\+Drawables.\+Drawable\+Rectangle}}, \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_ellipse_a56cc285c8384e2c6e2137c3c70ead038}{paint.\+Drawables.\+Drawable\+Ellipse}}, and \mbox{\hyperlink{classpaint_1_1_drawables_1_1_drawable_line_a48e7a24fa16ecc6eeaf3060cac32f71c}{paint.\+Drawables.\+Drawable\+Line}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_aa8d8a69f316feaf71c3a5a1a832e1cdf}\label{classpaint_1_1_drawables_1_1_drawable_aa8d8a69f316feaf71c3a5a1a832e1cdf}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!affineTransform@{affineTransform}}
+\index{affineTransform@{affineTransform}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{affineTransform}{affineTransform}}
+{\footnotesize\ttfamily Affine\+Transform paint.\+Drawables.\+Drawable.\+affine\+Transform = null\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Affine transform. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a82a56f10a2511a72b88957a06ce79d44}\label{classpaint_1_1_drawables_1_1_drawable_a82a56f10a2511a72b88957a06ce79d44}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!color@{color}}
+\index{color@{color}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily Color paint.\+Drawables.\+Drawable.\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Color. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a6a6e5e1581980fbc96133a0a251c2d51}\label{classpaint_1_1_drawables_1_1_drawable_a6a6e5e1581980fbc96133a0a251c2d51}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!ID@{ID}}
+\index{ID@{ID}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily Long paint.\+Drawables.\+Drawable.\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Id. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_abbca887361c4f0818649bd5d23362561}\label{classpaint_1_1_drawables_1_1_drawable_abbca887361c4f0818649bd5d23362561}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!rotation@{rotation}}
+\index{rotation@{rotation}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily double paint.\+Drawables.\+Drawable.\+rotation = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Rotation. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_abf391d9f9cac69072c0bafeb3bce2aff}\label{classpaint_1_1_drawables_1_1_drawable_abf391d9f9cac69072c0bafeb3bce2aff}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!scale@{scale}}
+\index{scale@{scale}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily double paint.\+Drawables.\+Drawable.\+scale = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Scale. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_a4fab2a0208b74b3310a8430708eb1af4}\label{classpaint_1_1_drawables_1_1_drawable_a4fab2a0208b74b3310a8430708eb1af4}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!shape@{shape}}
+\index{shape@{shape}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily Shape paint.\+Drawables.\+Drawable.\+shape\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Shape. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_aededbbce7d70aa2b9b98ea5f0ef03795}\label{classpaint_1_1_drawables_1_1_drawable_aededbbce7d70aa2b9b98ea5f0ef03795}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!translationX@{translationX}}
+\index{translationX@{translationX}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{translationX}{translationX}}
+{\footnotesize\ttfamily double paint.\+Drawables.\+Drawable.\+translationX = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+The Translation x. \mbox{\Hypertarget{classpaint_1_1_drawables_1_1_drawable_aaf929e6fb5e93b093bf6691b5ed80926}\label{classpaint_1_1_drawables_1_1_drawable_aaf929e6fb5e93b093bf6691b5ed80926}} 
+\index{paint.Drawables.Drawable@{paint.Drawables.Drawable}!translationY@{translationY}}
+\index{translationY@{translationY}!paint.Drawables.Drawable@{paint.Drawables.Drawable}}
+\doxysubsubsection{\texorpdfstring{translationY}{translationY}}
+{\footnotesize\ttfamily double paint.\+Drawables.\+Drawable.\+translationY = 0\hspace{0.3cm}{\ttfamily [package]}}
+
+The Translation y. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Users/piotr/\+Programing/\+Java/swing/\+Paint/src/paint/\+Drawables/\mbox{\hyperlink{_drawable_8java}{Drawable.\+java}}\end{DoxyCompactItemize}
